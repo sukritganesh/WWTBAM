@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" role="img" aria-label="One Million app icon">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="44%" r="65%">
+      <stop offset="0" stop-color="#173f73"/>
+      <stop offset=".58" stop-color="#08152d"/>
+      <stop offset="1" stop-color="#02050c"/>
+    </radialGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#e8f8ff"/><stop offset=".45" stop-color="#4ec5ff"/><stop offset="1" stop-color="#2265b9"/>
+    </linearGradient>
+  </defs>
+  <rect width="192" height="192" rx="38" fill="url(#bg)"/>
+  <circle cx="96" cy="96" r="67" fill="none" stroke="#4ec5ff" stroke-opacity=".25" stroke-width="2"/>
+  <circle cx="96" cy="96" r="51" fill="none" stroke="url(#edge)" stroke-width="3"/>
+  <path d="M96 27v23M96 142v23M27 96h23M142 96h23" stroke="#74d5ff" stroke-width="3" stroke-linecap="round"/>
+  <path d="M68 123V70h15l13 12 13-12h15v53h-17V95l-11 10-11-10v28z" fill="url(#edge)"/>
+  <circle cx="96" cy="96" r="73" fill="none" stroke="#c9e8ff" stroke-opacity=".32" stroke-dasharray="3 9"/>
+</svg>

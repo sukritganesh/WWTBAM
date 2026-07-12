@@ -1,0 +1,41 @@
+# Dependencies and builds
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+
+# Test artifacts
+playwright-report/
+test-results/
+blob-report/
+.playwright/
+tmp-browser-profile/
+
+# Local state and exports
+*.log
+logs/
+*.local
+.env
+.env.*
+!.env.example
+*.millionaire-backup.json
+local-db-exports/
+content/.staging/
+
+# Editors and operating systems
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+*.swo
+
+# Tool caches
+.vite/
+.cache/
+.eslintcache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
