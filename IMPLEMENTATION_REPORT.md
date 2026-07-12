@@ -114,13 +114,15 @@ This verification is not a formal WCAG conformance claim. No axe scan, screen-re
 
 ## Post-run observed defects
 
-A hands-on review after the one-shot implementation identified the following three defects. They are documented here as of 2026-07-12 and remain intentionally unfixed so this report accurately records the result of the original implementation run.
+A hands-on review after the one-shot implementation identified the following three defects. They are documented here as of 2026-07-12, with their remediation status recorded individually.
 
 ### Profile-name field loses focus after each character
 
 In the Create Profile dialog, typing into the display-name field updates `createName` and rerenders `App`. `App` supplies the dialog with a newly created inline `onClose` callback on every render. Because the shared `Modal` focus-management effect depends on that callback, the effect cleans up and runs again after every keystroke, moving focus to the first focusable control—normally the dialog's Close button. The player must therefore click the text field again before typing each subsequent character.
 
 This is a focus-lifecycle defect, not an input-validation or IndexedDB problem. It was not exposed by the existing component suite because profile creation was covered as a completed workflow rather than with character-by-character focus assertions.
+
+**Status: fixed.** The modal now keeps the latest Close callback in a ref while running its initial-focus and focus-trap effect only for the modal lifecycle. A regression test types a complete controlled name and verifies that the field retains focus across rerenders.
 
 ### Resuming a completed question repeats its narration
 
