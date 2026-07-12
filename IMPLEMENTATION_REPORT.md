@@ -130,6 +130,8 @@ When a saved run is claimed, `claimSavedRun` unconditionally resets `lastNarrate
 
 The saved gameplay state itself remains correct; the defect is limited to narration replay. The narration guard is session-memory state and does not distinguish an unanswered newly displayed question from an already resolved question restored from persistence.
 
+**Status: fixed.** Resuming now reconstructs the narration marker from the persisted current question and `displayedQuestionIds`. Previously displayed questions are not spoken automatically on load, while a genuinely undisplayed next question remains eligible for narration; the explicit Replay Question control is unchanged. Focused tests cover both cases.
+
 ### Background music is an unpleasant continuous oscillator drone
 
 The effects channel works, but the background-music implementation does not produce conventional music. Each tier starts only two indefinitely running Web Audio oscillators: a low sine wave and a low triangle wave at a fixed frequency pair. For example, the menu tier uses 55 Hz and 82.41 Hz. There is no rhythm, sequencing, harmonic progression, modulation, filtering, or evolving amplitude envelope.

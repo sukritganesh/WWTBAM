@@ -66,6 +66,7 @@ import {
   decodeGameRun,
   importedBundleFromNormalized,
   importedGameCatalog,
+  narratedQuestionIdForResume,
   resolvedQuestionFromSaved,
   resolvedQuestionsForSave,
   serializeGameRun,
@@ -481,7 +482,7 @@ export function App() {
     setControllerStatus('taking-control');
     try {
       const claimed = await repositories.current!.activeSave.claimController({ runId: activeSave.runId, expectedRevision: activeSave.revision, expectedControllerEpoch: activeSave.controller.epoch, controllerId, force });
-      setActiveSave(claimed); setGame(savedRun); setPersistedGameRevision(savedRun.saveRevision); setControllerStatus('active'); setDialog(null); setScreen('game'); lastNarratedQuestion.current = null;
+      setActiveSave(claimed); setGame(savedRun); setPersistedGameRevision(savedRun.saveRevision); setControllerStatus('active'); setDialog(null); setScreen('game'); lastNarratedQuestion.current = narratedQuestionIdForResume(savedRun);
     } catch (error) {
       setControllerStatus('read-only');
       if (error instanceof ControllerConflictError) setDialog({ kind: 'take-control' });

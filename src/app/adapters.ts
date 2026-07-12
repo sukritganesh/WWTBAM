@@ -174,6 +174,11 @@ export function serializeGameRun(run: GameRunState): JsonValue {
   return toJsonValue(run);
 }
 
+export function narratedQuestionIdForResume(run: GameRunState): string | null {
+  const question = run.questions[run.currentQuestionIndex];
+  return question && run.displayedQuestionIds.includes(question.id) ? question.id : null;
+}
+
 export function decodeGameRun(value: unknown): GameRunState | null {
   if (!isRecord(value) || value.schemaVersion !== 1 || typeof value.runId !== 'string') return null;
   if (!Array.isArray(value.questions) || value.questions.length !== 15) return null;
