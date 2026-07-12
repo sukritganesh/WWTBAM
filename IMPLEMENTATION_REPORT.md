@@ -112,6 +112,28 @@ React Testing Library verifies labeled four-choice interaction, A-D keyboard sel
 
 This verification is not a formal WCAG conformance claim. No axe scan, screen-reader session, automated pixel-diff project, Firefox/WebKit run, or full keyboard-only tour of every management screen was performed.
 
+## Post-run observed defects
+
+A hands-on review after the one-shot implementation identified the following three defects. They are documented here as of 2026-07-12 and remain intentionally unfixed so this report accurately records the result of the original implementation run.
+
+### Profile-name field loses focus after each character
+
+In the Create Profile dialog, typing into the display-name field updates `createName` and rerenders `App`. `App` supplies the dialog with a newly created inline `onClose` callback on every render. Because the shared `Modal` focus-management effect depends on that callback, the effect cleans up and runs again after every keystroke, moving focus to the first focusable control—normally the dialog's Close button. The player must therefore click the text field again before typing each subsequent character.
+
+This is a focus-lifecycle defect, not an input-validation or IndexedDB problem. It was not exposed by the existing component suite because profile creation was covered as a completed workflow rather than with character-by-character focus assertions.
+
+### Resuming a completed question repeats its narration
+
+When a saved run is claimed, `claimSavedRun` unconditionally resets `lastNarratedQuestion.current` to `null`. The narration effect then sees that the current question is present in `displayedQuestionIds` but no longer has an in-memory narration marker, so it speaks the question again. This also occurs when the persisted phase is already `correct-reveal`, such as after answering correctly and choosing Save and Exit before resuming the run.
+
+The saved gameplay state itself remains correct; the defect is limited to narration replay. The narration guard is session-memory state and does not distinguish an unanswered newly displayed question from an already resolved question restored from persistence.
+
+### Background music is an unpleasant continuous oscillator drone
+
+The effects channel works, but the background-music implementation does not produce conventional music. Each tier starts only two indefinitely running Web Audio oscillators: a low sine wave and a low triangle wave at a fixed frequency pair. For example, the menu tier uses 55 Hz and 82.41 Hz. There is no rhythm, sequencing, harmonic progression, modulation, filtering, or evolving amplitude envelope.
+
+The result is technically an active background-audio signal, but perceptually it is a low electronic drone or buzz and may sound especially poor on some speakers. This is a product-quality failure in the procedural-audio interpretation, even though the audio graph is functioning as written and the separately enveloped sound effects remain audible.
+
 ## Known limitations and human review
 
 - The built-in questions are structurally validated assistant-reviewed drafts. A human editor should factual-check all questions, hints, explanations, dates, names, and ambiguity before public editorial release.
