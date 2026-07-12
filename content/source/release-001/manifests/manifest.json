@@ -1,0 +1,203 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "builtin-question-content-release-001",
+  "title": "Initial Question Content Release 001",
+  "version": "1.0.0",
+  "description": "Manifest for 300 Fresh Mix questions and 12 curated sets containing 180 additional questions.",
+  "totals": {
+    "poolFiles": 5,
+    "curatedSetFiles": 6,
+    "poolQuestions": 300,
+    "curatedSetQuestions": 180,
+    "totalUniqueQuestions": 480,
+    "curatedSets": 12,
+    "primaryCategories": 20
+  },
+  "files": [
+    {
+      "kind": "pool",
+      "path": "pool_json/pool-001-history-and-geography.json",
+      "packId": "builtin-pool-release-001-group-001",
+      "questionCount": 60,
+      "categories": [
+        "Ancient History",
+        "Medieval and Early Modern History",
+        "Modern History",
+        "Geography"
+      ],
+      "sha256": "f595a8d5608da359f12b76e77adfc77df55373d9a4a613a960a496316c56a309",
+      "defaultEnabled": true
+    },
+    {
+      "kind": "pool",
+      "path": "pool_json/pool-002-science-and-technology.json",
+      "packId": "builtin-pool-release-001-group-002",
+      "questionCount": 60,
+      "categories": [
+        "Astronomy and Space",
+        "Science",
+        "Nature and Earth",
+        "Technology"
+      ],
+      "sha256": "ac2878006d4f4f12e84a33de341aeb2ddbc94a3afb6747a39987279957a10d93",
+      "defaultEnabled": true
+    },
+    {
+      "kind": "pool",
+      "path": "pool_json/pool-003-reasoning-language-and-art.json",
+      "packId": "builtin-pool-release-001-group-003",
+      "questionCount": 60,
+      "categories": [
+        "Computation",
+        "Vocabulary",
+        "Literature and Language",
+        "Art and Culture"
+      ],
+      "sha256": "c3f55d66f610e775b877c82aab1811981e8f0bbb8926c043f62e122e1658d58c",
+      "defaultEnabled": true
+    },
+    {
+      "kind": "pool",
+      "path": "pool_json/pool-004-entertainment-sports-and-society.json",
+      "packId": "builtin-pool-release-001-group-004",
+      "questionCount": 60,
+      "categories": [
+        "Film and Television",
+        "Music",
+        "Sports and Games",
+        "Society and Everyday Life"
+      ],
+      "sha256": "3cbd15c9c785e98f5a477c76bbb264b424eefd19e8d63ad9cb80d171851b167e",
+      "defaultEnabled": true
+    },
+    {
+      "kind": "pool",
+      "path": "pool_json/pool-005-food-politics-mythology-and-business.json",
+      "packId": "builtin-pool-release-001-group-005",
+      "questionCount": 60,
+      "categories": [
+        "Food and Drink",
+        "Politics and World Affairs",
+        "Mythology and Religion",
+        "Business and Economics"
+      ],
+      "sha256": "3eb7acfb2af2170012a62a46a90d84f9608fe949b04cac8c6bb157fdce1956c7",
+      "defaultEnabled": true
+    },
+    {
+      "kind": "set",
+      "path": "curated_sets_json/curated-001-astronomy-and-computation.json",
+      "packId": "builtin-curated-release-001-group-001",
+      "questionCount": 30,
+      "categories": [
+        "Astronomy and Space",
+        "Computation"
+      ],
+      "sha256": "b964f637ad1969f630456eec0331a6ee2fe32ce18c7835d624c3028dcc217e7a",
+      "defaultEnabled": true
+    },
+    {
+      "kind": "set",
+      "path": "curated_sets_json/curated-002-vocabulary-and-ancient-history.json",
+      "packId": "builtin-curated-release-001-group-002",
+      "questionCount": 30,
+      "categories": [
+        "Ancient History",
+        "Vocabulary"
+      ],
+      "sha256": "c81875b37d8ad0bdac32ade2abfd4bf352d71a49dde12ebf4695e2c8229d95f4",
+      "defaultEnabled": true
+    },
+    {
+      "kind": "set",
+      "path": "curated_sets_json/curated-003-geography-and-science.json",
+      "packId": "builtin-curated-release-001-group-003",
+      "questionCount": 30,
+      "categories": [
+        "Geography",
+        "Science"
+      ],
+      "sha256": "e6967880d6d6e18f73f5f8e96ace5ebae714e136e2fe8cfa1397ec27d4831efe",
+      "defaultEnabled": true
+    },
+    {
+      "kind": "set",
+      "path": "curated_sets_json/curated-004-general-knowledge.json",
+      "packId": "builtin-curated-release-001-group-004",
+      "questionCount": 30,
+      "categories": [
+        "Ancient History",
+        "Art and Culture",
+        "Astronomy and Space",
+        "Business and Economics",
+        "Film and Television",
+        "Food and Drink",
+        "Geography",
+        "Literature and Language",
+        "Modern History",
+        "Music",
+        "Mythology and Religion",
+        "Nature and Earth",
+        "Politics and World Affairs",
+        "Science",
+        "Society and Everyday Life",
+        "Sports and Games",
+        "Technology",
+        "Vocabulary"
+      ],
+      "sha256": "7a189fb06d46a647f61cafded55314221308043c20f04d9184ccd6cc6058b6eb",
+      "defaultEnabled": true
+    },
+    {
+      "kind": "set",
+      "path": "curated_sets_json/curated-005-world-civilizations-and-stem.json",
+      "packId": "builtin-curated-release-001-group-005",
+      "questionCount": 30,
+      "categories": [
+        "Ancient History",
+        "Art and Culture",
+        "Astronomy and Space",
+        "Business and Economics",
+        "Computation",
+        "Food and Drink",
+        "Geography",
+        "Literature and Language",
+        "Medieval and Early Modern History",
+        "Modern History",
+        "Mythology and Religion",
+        "Politics and World Affairs",
+        "Science",
+        "Technology"
+      ],
+      "sha256": "b4aced2b1e7e05f4425be318e3accbe1f7beba62be517769ba14c63b0a5b0250",
+      "defaultEnabled": true
+    },
+    {
+      "kind": "set",
+      "path": "curated_sets_json/curated-006-arts-culture-and-everyday.json",
+      "packId": "builtin-curated-release-001-group-006",
+      "questionCount": 30,
+      "categories": [
+        "Art and Culture",
+        "Business and Economics",
+        "Film and Television",
+        "Food and Drink",
+        "Geography",
+        "Literature and Language",
+        "Music",
+        "Politics and World Affairs",
+        "Science",
+        "Society and Everyday Life",
+        "Technology",
+        "Vocabulary"
+      ],
+      "sha256": "969974868a3538df4c0e83e193a63b652e384fa7098a72658dbaff9b76bf0078",
+      "defaultEnabled": true
+    }
+  ],
+  "integrity": {
+    "hashAlgorithm": "SHA-256",
+    "hashScope": "exact bytes stored in Google Drive",
+    "validatedAt": "2026-07-11"
+  }
+}

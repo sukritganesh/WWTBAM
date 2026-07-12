@@ -1,0 +1,62 @@
+:root {
+  --black: #02040a;
+  --stage: #050913;
+  --surface: rgba(8, 18, 34, 0.9);
+  --surface-raised: rgba(13, 28, 50, 0.95);
+  --surface-soft: rgba(17, 37, 64, 0.6);
+  --metal: #70839a;
+  --metal-bright: #c3d1de;
+  --blue: #35aef4;
+  --blue-bright: #83ddff;
+  --blue-deep: #1465b4;
+  --cyan: #b9edff;
+  --text: #f3f8fc;
+  --text-soft: #a7b7c8;
+  --muted: #718196;
+  --correct: #4dd7b0;
+  --correct-deep: #0a725c;
+  --wrong: #ff6b65;
+  --wrong-deep: #8e282b;
+  --gold: #e7c66e;
+  --gold-bright: #fff0b2;
+  --focus: #a8e9ff;
+  --shadow: 0 28px 80px rgba(0, 0, 0, 0.48);
+  --panel-border: rgba(132, 188, 228, 0.28);
+  --fast: 120ms;
+  --medium: 280ms;
+  --slow: 700ms;
+  --ease: cubic-bezier(0.2, 0.72, 0.2, 1);
+  --font-ui: 'Sora Variable', 'Segoe UI Variable', 'Segoe UI', sans-serif;
+  --font-display: 'Rajdhani', 'Bahnschrift', sans-serif;
+}
+
+[data-high-contrast='true'] {
+  --surface: rgba(3, 8, 16, 0.98);
+  --surface-raised: rgba(6, 17, 32, 1);
+  --panel-border: rgba(167, 224, 255, 0.62);
+  --text-soft: #d4e0eb;
+  --muted: #afbdca;
+}
+
+[data-reduced-glow='true'] * {
+  --shadow: 0 18px 48px rgba(0, 0, 0, 0.52);
+  text-shadow: none !important;
+}
+
+[data-reduced-motion='true'] *,
+[data-reduced-motion='true'] *::before,
+[data-reduced-motion='true'] *::after {
+  scroll-behavior: auto !important;
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
