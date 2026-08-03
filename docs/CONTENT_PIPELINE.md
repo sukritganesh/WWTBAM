@@ -19,24 +19,24 @@ Fresh Mix, set browsing, and selection services should consume the normalized ca
 
 ### Exact coverage
 
-Release 001 contains 480 distinct questions:
+Release 001 v1.1.0 contains 525 distinct questions:
 
 | Content | Files | Questions | Sets |
 | --- | ---: | ---: | ---: |
 | Fresh Mix pool | 5 | 300 | 0 |
-| Curated content | 6 | 180 | 12 |
-| Total | 11 | 480 | 12 |
+| Curated content | 7 | 225 | 15 |
+| Total | 12 | 525 | 15 |
 
-Pool coverage is a complete 20-category by 15-level grid. Each category has one pool question at every exact level. Every curated set also has exactly one question at Levels 1 through 15. Consequently, the full catalog has 32 questions at every level: 20 pool questions and 12 curated questions.
+Pool coverage is a complete 20-category by 15-level grid. Each category has one pool question at every exact level. Every curated set also has exactly one question at Levels 1 through 15. Consequently, the full catalog has 35 questions at every level: 20 pool questions and 15 curated questions.
 
 Full-catalog display bands are:
 
-- Easy, Levels 1-5: 160 questions.
-- Moderate, Levels 6-10: 160 questions.
-- Difficult, Levels 11-14: 128 questions.
-- Millionaire, Level 15: 32 questions.
+- Easy, Levels 1-5: 175 questions.
+- Moderate, Levels 6-10: 175 questions.
+- Difficult, Levels 11-14: 140 questions.
+- Millionaire, Level 15: 35 questions.
 
-The pool-only figures are 100 Easy, 100 Moderate, 80 Difficult, and 20 Millionaire questions. There are six single-category sets and six mixed-category sets. Pool and curated question IDs and prompts do not overlap.
+The pool-only figures are 100 Easy, 100 Moderate, 80 Difficult, and 20 Millionaire questions. There are nine single-category sets and six mixed-category sets. Pool and curated question IDs and prompts do not overlap.
 
 The controlled categories are exported as `PRIMARY_CATEGORIES` from `src/content/types.ts`. A source or imported question with any other primary category is invalid.
 
@@ -47,8 +47,9 @@ The byte-level variants in the supplied release are meaningful:
 | Files | Encoding/format |
 | --- | --- |
 | Five `pool/*.json` payloads | UTF-8, no BOM, one minified line plus final LF |
-| Six `curated-sets/*.json` payloads | UTF-8 with BOM, one minified line, no final newline |
-| `manifests/coverage-index.json` | UTF-8 with BOM, one minified line |
+| Six original `curated-sets/*.json` payloads | UTF-8 with BOM, one minified line, no final newline |
+| `curated-007-geography-collection.json` | UTF-8 without BOM, formatted |
+| `manifests/coverage-index.json` | UTF-8 without BOM, one minified line |
 | `manifests/manifest.json` | UTF-8 without BOM, formatted |
 
 `parseJsonData()` removes one leading U+FEFF before `JSON.parse()`. This is required because direct Node `JSON.parse()` rejects the BOM-prefixed curated payloads. The pipeline calculates SHA-256 from the original `Buffer`, not the BOM-stripped text.
@@ -86,11 +87,11 @@ All 11 built-in packs have the same root keys:
 
 The custom validator also accepts `mixed` and `both` content types.
 
-Built-in pool packs contain 60 questions and an empty `sets` array. Built-in curated packs contain 30 questions and two sets.
+Built-in pool packs contain 60 questions and an empty `sets` array. The six original curated packs contain 30 questions and two sets; the geography supplement contains 45 questions and three sets.
 
 ### Question
 
-All 480 source questions contain exactly these keys:
+All 525 source questions contain exactly these keys:
 
 ```json
 {
@@ -116,7 +117,7 @@ Question-level `metadata` is absent from Release 001 but is accepted for custom 
 
 ### Curated set
 
-All 12 source set manifests contain:
+All 15 source set manifests contain:
 
 ```json
 {
@@ -136,7 +137,7 @@ The validator also accepts optional `audience` and `difficultyNote` fields. A se
 There are two built-in metadata key sets:
 
 - Five pool packs: `author`, `questionCount`, `questionsPerCategory`, `reviewStatus`, `humanReviewRecommended`, `timeSensitiveQuestionCount`.
-- Six curated packs: `author`, `questionCount`, `setCount`, `reviewStatus`, `humanReviewRecommended`, `timeSensitiveQuestionCount`.
+- Seven curated packs: `author`, `questionCount`, `setCount`, `reviewStatus`, `humanReviewRecommended`, `timeSensitiveQuestionCount`.
 
 Release 001 questions inherit `language`, author, review status, human-review recommendation, source notes, verification notes, generated-by label, and time-sensitive fields during normalization. Unknown imported metadata keys are not copied to the runtime catalog.
 
@@ -289,7 +290,7 @@ The content subsystem never partially writes a pack and never accesses IndexedDB
 
 ## Adding pool files
 
-Release 001 is already hash-published. Prefer creating a new versioned release rather than modifying it. The current script paths are deliberately fixed to `release-001`; introducing `release-002` requires updating the source/output constants or generalizing the pipeline before changing the default built-in release.
+Release 001 is hash-protected. Existing payload bytes should not be edited casually; an intentional additive update must increment the manifest version, add new uniquely identified payloads, recalculate coverage and hashes, and retain prior payloads unchanged. The current script paths are deliberately fixed to `release-001`; introducing `release-002` requires updating the source/output constants or generalizing the pipeline before changing the default built-in release.
 
 For a new development release:
 
@@ -358,7 +359,7 @@ npm run build
 `npm run build` already starts with `npm run build:content`. Current successful content output is:
 
 ```text
-Content catalog built: 480 questions (300 pool + 180 curated), 12 sets, 11 source files, 5 repairs.
+Content catalog built: 525 questions (300 pool + 225 curated), 15 sets, 12 source files, 5 repairs.
 ```
 
 After a content change, inspect `content/normalized/release-001/validation-report.json`. Its `valid` flag must be true, `errors` must be empty, all source hashes must match, totals and coverage must be expected, and only understood editorial warnings may remain.

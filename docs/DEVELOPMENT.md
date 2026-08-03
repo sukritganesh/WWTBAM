@@ -42,7 +42,7 @@ src/app/          Application orchestration and domain/storage adapters
 src/game/         Pure game rules, state, reducer, selection, payouts
 src/content/      Content validation, normalization, catalog and imports
 src/data/         IndexedDB schema, migrations, repositories and transfers
-src/audio/        Procedural Web Audio and speech synthesis
+src/audio/        Recorded music, procedural Web Audio effects, and speech synthesis
 src/pwa/          Service-worker registration/status hook
 src/screens/      Controlled full-screen presentation components
 src/components/   Shared UI primitives

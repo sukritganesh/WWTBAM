@@ -71,7 +71,7 @@ export function TitleScreen(props: TitleScreenProps) {
           {atLimit && <p className="profile-limit">The 20-profile limit is reached. Guest play remains available; delete a profile to create another.</p>}
         </section>
       </div>
-      <footer className="title-footer"><span>Local-first · no account required</span><span>Release 001 · 480 questions</span></footer>
+      <footer className="title-footer"><span>Local-first · no account required</span><span>Release 001 · 525 questions</span></footer>
     </main>
   );
 }

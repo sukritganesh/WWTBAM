@@ -89,7 +89,7 @@ function setup(overrides: Partial<ContentManagerScreenProps> = {}) {
 describe('ContentManagerScreen', () => {
   it('shows built-in coverage and filters/toggles repository-provided packs', async () => {
     const { props, user } = setup();
-    expect(screen.getByText('480')).toBeInTheDocument();
+    expect(screen.getByText('525')).toBeInTheDocument();
     expect(screen.getByText('Community History')).toBeInTheDocument();
     expect(screen.getByText('Kitchen Science')).toBeInTheDocument();
 

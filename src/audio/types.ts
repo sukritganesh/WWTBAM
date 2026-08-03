@@ -1,4 +1,11 @@
-export type MusicTier = 'menu' | 'early' | 'middle' | 'late' | 'final' | 'silent';
+export type MusicScene =
+  | 'intro'
+  | 'level-1'
+  | 'level-2'
+  | 'level-3'
+  | 'pause'
+  | 'outro'
+  | 'silent';
 
 export type SoundEvent =
   | 'press'

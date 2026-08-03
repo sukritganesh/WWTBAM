@@ -50,9 +50,9 @@ Retaining device-local Guest history is a small extension of the specification�
 
 ## Built-in content normalization
 
-The immutable source release is validated before normalization. Integrity hashes are calculated over the exact source bytes, including any byte-order mark. JSON parsing then removes one leading UTF-8 BOM when present. Six curated-set payloads and `coverage-index.json` contain BOMs; plain `JSON.parse` on those unmodified strings would fail.
+The source release is validated before normalization. Integrity hashes are calculated over the exact source bytes, including any byte-order mark. JSON parsing then removes one leading UTF-8 BOM when present. The six original curated-set payloads contain BOMs; plain `JSON.parse` on those unmodified strings would fail. The v1.1.0 geography supplement and updated coverage index are UTF-8 without BOM.
 
-The prose model describes question-level review metadata, but the supplied 480 questions do not contain individual `metadata` objects. Review status, author, language, human-review recommendation, and time-sensitive counts live at pack level. Normalization inherits those values into each question, while a future imported question may override supported fields explicitly. Unknown metadata is not copied into the runtime model.
+The prose model describes question-level review metadata, but the 480 original questions and 45-question geography supplement do not contain individual `metadata` objects. Review status, author, language, human-review recommendation, and time-sensitive counts live at pack level. Normalization inherits those values into each question, while a future imported question may override supported fields explicitly. Unknown metadata is not copied into the runtime model.
 
 Exactly five documented Hint repairs are applied to normalized built-in copies:
 
@@ -72,7 +72,9 @@ All built-in questions currently inherit `assistant-reviewed-draft`. That status
 
 ## Audio implementation deviation
 
-The handoff supplied an audio curation document and links to candidate CC0 packs, but no audio files or archives. Instead of downloading hundreds of candidates without an audition and editorial pass, the implementation ships original procedural Web Audio recipes behind the centralized sound registry. Effects are short oscillator/envelope combinations, and continuous music uses restrained tier-specific oscillator beds. Browser `speechSynthesis` remains the optional narration channel.
+The handoff supplied an audio curation document and links to candidate CC0 packs, but no audio files or archives. The original one-shot implementation therefore used procedural Web Audio for both effects and ambient beds. During a later user-approved pass, twelve user-supplied WAV tracks were transcoded to 192 kbps MP3 and added as the recorded music layer. Effects remain short oscillator/envelope combinations, while browser `speechSynthesis` remains the optional narration channel.
+
+Each random run ID deterministically selects one track for Questions 1–5, Questions 6–10, Questions 11–15, Pause, and Outro. This avoids changing the selection after refresh without expanding the persisted game schema. The selected media elements remain alive for the run so gameplay and pause music resume from their prior positions after repeated pauses.
 
 Consequences of this decision:
 
@@ -100,13 +102,12 @@ The fixed desktop stage and minimum-size notice remain deliberate product constr
 
 ## PWA and offline boundary
 
-The production build uses prompted service-worker updates rather than automatic reload. The application shell, local fonts, icons, generated catalog, JavaScript, and CSS are bundled locally. Procedural audio removes the need to precache large media files. Applying an update remains a user action surfaced from a safe settings flow.
+The production build uses prompted service-worker updates rather than automatic reload. The application shell, local fonts, icons, generated catalog, JavaScript, CSS, and recorded MP3 music are bundled locally. The service worker allows music assets up to 6 MiB each and precaches the complete 36.95 MiB music set for offline play. Applying an update remains a user action surfaced from a safe settings flow.
 
 Offline readiness is based on Workbox’s `onOfflineReady` signal or an already controlling service worker. The current implementation does not independently enumerate and hash every cache entry at runtime. If the readiness contract later includes large optional media or separately fetched content, that check should be strengthened before the UI claims complete readiness.
 
 ## Build-size note
 
-The current production build succeeds, but Vite warns that the main JavaScript chunk is larger than 500 kB. At the latest verification it was approximately 977 kB minified and 187 kB gzip-compressed. The generated 480-question catalog and the single-screen application are compiled into that main chunk.
+The current production build succeeds, but Vite warns that the main JavaScript chunk is larger than 500 kB. The generated 525-question catalog and the single-screen application are compiled into that main chunk.
 
 This is not currently a functional blocker for the desktop, offline-first target, and the whole precache remains modest. A future optimization pass can split infrequently used management/statistics screens and, if appropriate, load a separately precached catalog asset. Any split must retain complete offline availability and must not introduce gameplay-time network dependence.
-

@@ -9,13 +9,13 @@ The application is a local-only React, TypeScript, and Vite PWA. It has no backe
 - Fifteen exact difficulty levels from $100 to $1,000,000, with $1,000 and $32,000 checkpoints.
 - Deliberate answer selection, final-answer confirmation, suspense, explanations, walk-away payouts, and millionaire victory.
 - Fresh Mix with profile-aware unseen/least-seen/least-recent selection and soft category diversity.
-- Twelve authored curated sets plus Surprise Me selection.
+- Fifteen authored curated sets, including three geography collections, plus Surprise Me selection.
 - Hint and absolute-deadline 60-second Phone a Friend lifelines.
 - Up to 20 named local profiles, Guest play, career statistics, set progress, history, and full run review.
 - Exactly one global, owner-bound resumable save with immutable question/answer snapshots and multi-tab takeover protection.
 - Transactional custom-pack import, pasted JSON, manual form authoring, templates, pack lifecycle controls, and inert-data validation.
 - Versioned full backup/restore and single-profile transfer.
-- Local Sora/Rajdhani fonts, original SVG stage art, procedural Web Audio, and browser speech synthesis.
+- Local Sora/Rajdhani fonts, original SVG stage art, recorded looped music, procedural Web Audio effects, and browser speech synthesis.
 - Keyboard play, visible focus, non-color answer states, reduced motion/glow, increased contrast, and muted-play equivalence.
 - Installable PWA with a precached application shell and complete built-in catalog.
 
@@ -87,7 +87,7 @@ npm run normalize:content
 npm run build:content
 ```
 
-The accepted release contains 300 Fresh Mix questions and 180 separate questions in 12 curated sets: 480 unique questions across 20 primary categories. See [Content Pipeline](docs/CONTENT_PIPELINE.md) and [content/README.md](content/README.md) before changing source content.
+The accepted release contains 300 Fresh Mix questions and 225 separate questions in 15 curated sets: 525 unique questions across 20 primary categories. The three supplemental geography sets cover physical geography, borders and human geography, and islands and seas. See [Content Pipeline](docs/CONTENT_PIPELINE.md) and [content/README.md](content/README.md) before changing source content.
 
 ## Project structure
 
@@ -98,7 +98,7 @@ src/content/      validators, normalization, import staging, runtime catalog
 src/data/         IndexedDB schema, migrations, repositories, backup/profile transfer
 src/screens/      title, dashboard, setup, gameplay, results, insights, content manager
 src/components/   shared accessible stage components and dialogs
-src/audio/        procedural sound registry, AudioManager, speech manager
+src/audio/        recorded-music catalog/controller, procedural effects, speech manager
 src/styles/       semantic tokens and fixed-stage visual system
 scripts/content/  deterministic validation/normalization/catalog commands
 content/source/   byte-preserved immutable release
@@ -124,9 +124,11 @@ docs/             architecture, development, testing, content, and release notes
 
 - The launch layout targets landscape desktop windows at 1280×720 or larger; mobile/tablet layouts are not part of this release.
 - Speech voice quality and availability depend on locally installed browser/operating-system voices. Missing speech never blocks gameplay.
-- The supplied package included audio source links but no audio files. This release uses original procedural Web Audio cues and ambient tones instead of third-party binaries; the architecture keeps them replaceable through one registry.
+- The original planning package included audio source links but no audio files. A later user-approved music pass added twelve locally supplied tracks under `public/audio/music`; procedural Web Audio remains in use for short sound effects.
+- Music choices are derived from the random run ID: one loop each for Questions 1–5, 6–10, 11–15, Pause, and Outro. Refreshing retains the same selection, while repeated pauses preserve both gameplay and pause-track positions within the browser session.
+- The repository owner must confirm redistribution rights for the user-supplied music before public distribution.
 - Release 001 is structurally validated and marked `assistant-reviewed-draft`. Human factual spot-checking and empirical difficulty calibration remain recommended before public editorial certification.
-- The normalized catalog makes the initial JavaScript chunk comparatively large (roughly 977 kB uncompressed, about 187 kB gzip in the verified build). It remains fully precached; future content growth should move the catalog to a separately loaded cached chunk.
+- The normalized catalog makes the initial JavaScript chunk comparatively large (roughly 1,041 kB minified, about 195 kB gzip in the verified build). It remains fully precached; future content growth should move the catalog to a separately loaded cached chunk.
 - The source-scope UI exposes Built-in and All Enabled. Individual imported curated sets are directly selectable, while a custom-pack-only Fresh Mix scope is not exposed in this release.
 
 ## Repository state

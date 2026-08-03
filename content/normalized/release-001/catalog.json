@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "releaseId": "builtin-question-content-release-001",
-  "releaseVersion": "1.0.0",
+  "releaseVersion": "1.1.0",
   "questions": [
     {
       "id": "builtin-pool-ancient-history-01",
@@ -26636,6 +26636,2579 @@
       "sourceVersion": "1.0.0",
       "enabled": true,
       "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-physical-geography-01-q01",
+      "localId": "builtin-set-physical-geography-01-q01",
+      "level": 1,
+      "displayDifficulty": "Easy",
+      "internalTier": "Foundation",
+      "category": "Geography",
+      "tags": [
+        "rivers",
+        "North America"
+      ],
+      "prompt": "Which river runs through the Grand Canyon?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Rio Grande"
+        },
+        {
+          "id": "b",
+          "text": "Colorado River"
+        },
+        {
+          "id": "c",
+          "text": "Columbia River"
+        },
+        {
+          "id": "d",
+          "text": "Missouri River"
+        }
+      ],
+      "correctChoiceId": "b",
+      "hint": "The river shares its name with a U.S. state upstream.",
+      "explanation": "The Colorado River carved and continues to flow through the Grand Canyon.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-physical-geography-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-physical-geography-01-q02",
+      "localId": "builtin-set-physical-geography-01-q02",
+      "level": 2,
+      "displayDifficulty": "Easy",
+      "internalTier": "Foundation",
+      "category": "Geography",
+      "tags": [
+        "mountains",
+        "South America"
+      ],
+      "prompt": "The Andes run mainly along which side of South America?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Northern"
+        },
+        {
+          "id": "b",
+          "text": "Eastern"
+        },
+        {
+          "id": "c",
+          "text": "Western"
+        },
+        {
+          "id": "d",
+          "text": "Southern"
+        }
+      ],
+      "correctChoiceId": "c",
+      "hint": "The range parallels the continent's Pacific coast.",
+      "explanation": "The Andes extend along the western edge of South America.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-physical-geography-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-physical-geography-01-q03",
+      "localId": "builtin-set-physical-geography-01-q03",
+      "level": 3,
+      "displayDifficulty": "Easy",
+      "internalTier": "Foundation",
+      "category": "Geography",
+      "tags": [
+        "seas",
+        "Europe",
+        "Africa"
+      ],
+      "prompt": "Which sea lies between southern Europe and northern Africa?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Mediterranean Sea"
+        },
+        {
+          "id": "b",
+          "text": "Baltic Sea"
+        },
+        {
+          "id": "c",
+          "text": "Caribbean Sea"
+        },
+        {
+          "id": "d",
+          "text": "Arabian Sea"
+        }
+      ],
+      "correctChoiceId": "a",
+      "hint": "Its name can be translated as 'in the middle of the land.'",
+      "explanation": "The Mediterranean Sea separates southern Europe from northern Africa.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-physical-geography-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-physical-geography-01-q04",
+      "localId": "builtin-set-physical-geography-01-q04",
+      "level": 4,
+      "displayDifficulty": "Easy",
+      "internalTier": "Accessible",
+      "category": "Geography",
+      "tags": [
+        "capitals",
+        "Ecuador",
+        "mountains"
+      ],
+      "prompt": "Quito, the capital of Ecuador, lies in which mountain system?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "The Alps"
+        },
+        {
+          "id": "b",
+          "text": "The Appalachians"
+        },
+        {
+          "id": "c",
+          "text": "The Atlas Mountains"
+        },
+        {
+          "id": "d",
+          "text": "The Andes"
+        }
+      ],
+      "correctChoiceId": "d",
+      "hint": "This range follows western South America.",
+      "explanation": "Quito stands in an Andean valley at high elevation.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-physical-geography-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-physical-geography-01-q05",
+      "localId": "builtin-set-physical-geography-01-q05",
+      "level": 5,
+      "displayDifficulty": "Easy",
+      "internalTier": "Accessible",
+      "category": "Geography",
+      "tags": [
+        "rivers",
+        "Europe"
+      ],
+      "prompt": "The Danube River ultimately empties into which sea?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "North Sea"
+        },
+        {
+          "id": "b",
+          "text": "Black Sea"
+        },
+        {
+          "id": "c",
+          "text": "Adriatic Sea"
+        },
+        {
+          "id": "d",
+          "text": "Baltic Sea"
+        }
+      ],
+      "correctChoiceId": "b",
+      "hint": "Its delta lies mainly in Romania and Ukraine.",
+      "explanation": "The Danube reaches the Black Sea through the Danube Delta.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-physical-geography-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-physical-geography-01-q06",
+      "localId": "builtin-set-physical-geography-01-q06",
+      "level": 6,
+      "displayDifficulty": "Moderate",
+      "internalTier": "Intermediate",
+      "category": "Geography",
+      "tags": [
+        "mountains",
+        "Australia"
+      ],
+      "prompt": "The Great Dividing Range extends along the eastern side of which country?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "India"
+        },
+        {
+          "id": "b",
+          "text": "Mexico"
+        },
+        {
+          "id": "c",
+          "text": "Australia"
+        },
+        {
+          "id": "d",
+          "text": "South Africa"
+        }
+      ],
+      "correctChoiceId": "c",
+      "hint": "The range divides coastal drainage from inland drainage.",
+      "explanation": "The Great Dividing Range forms an extensive highland system in eastern Australia.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-physical-geography-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-physical-geography-01-q07",
+      "localId": "builtin-set-physical-geography-01-q07",
+      "level": 7,
+      "displayDifficulty": "Moderate",
+      "internalTier": "Intermediate",
+      "category": "Geography",
+      "tags": [
+        "estuaries",
+        "South America"
+      ],
+      "prompt": "Which two rivers meet to form the Río de la Plata estuary?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Amazon and Orinoco"
+        },
+        {
+          "id": "b",
+          "text": "Madeira and Tapajós"
+        },
+        {
+          "id": "c",
+          "text": "Magdalena and Cauca"
+        },
+        {
+          "id": "d",
+          "text": "Paraná and Uruguay"
+        }
+      ],
+      "correctChoiceId": "d",
+      "hint": "One river shares its name with a country on the estuary's northern shore.",
+      "explanation": "The Paraná and Uruguay rivers converge at the head of the Río de la Plata.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-physical-geography-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-physical-geography-01-q08",
+      "localId": "builtin-set-physical-geography-01-q08",
+      "level": 8,
+      "displayDifficulty": "Moderate",
+      "internalTier": "Intermediate",
+      "category": "Geography",
+      "tags": [
+        "lakes",
+        "rivers",
+        "Africa"
+      ],
+      "prompt": "Lake Tana is the principal source of which major river?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Blue Nile"
+        },
+        {
+          "id": "b",
+          "text": "Niger"
+        },
+        {
+          "id": "c",
+          "text": "Orange"
+        },
+        {
+          "id": "d",
+          "text": "Zambezi"
+        }
+      ],
+      "correctChoiceId": "a",
+      "hint": "The river joins another branch of the Nile at Khartoum.",
+      "explanation": "The Blue Nile flows from Lake Tana in the Ethiopian Highlands.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-physical-geography-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-physical-geography-01-q09",
+      "localId": "builtin-set-physical-geography-01-q09",
+      "level": 9,
+      "displayDifficulty": "Moderate",
+      "internalTier": "Advanced",
+      "category": "Geography",
+      "tags": [
+        "salt flats",
+        "Bolivia"
+      ],
+      "prompt": "Salar de Uyuni, the world's largest salt flat, is in which country?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Peru"
+        },
+        {
+          "id": "b",
+          "text": "Chile"
+        },
+        {
+          "id": "c",
+          "text": "Bolivia"
+        },
+        {
+          "id": "d",
+          "text": "Argentina"
+        }
+      ],
+      "correctChoiceId": "c",
+      "hint": "It occupies part of the high Altiplano.",
+      "explanation": "Salar de Uyuni lies in southwestern Bolivia.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-physical-geography-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-physical-geography-01-q10",
+      "localId": "builtin-set-physical-geography-01-q10",
+      "level": 10,
+      "displayDifficulty": "Moderate",
+      "internalTier": "Advanced",
+      "category": "Geography",
+      "tags": [
+        "oceans",
+        "trenches"
+      ],
+      "prompt": "Challenger Deep, Earth's deepest known seabed point, lies in which trench?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Puerto Rico Trench"
+        },
+        {
+          "id": "b",
+          "text": "Mariana Trench"
+        },
+        {
+          "id": "c",
+          "text": "Java Trench"
+        },
+        {
+          "id": "d",
+          "text": "Peru–Chile Trench"
+        }
+      ],
+      "correctChoiceId": "b",
+      "hint": "The trench is in the western Pacific near Guam.",
+      "explanation": "Challenger Deep is the deepest surveyed part of the Mariana Trench.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-physical-geography-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-physical-geography-01-q11",
+      "localId": "builtin-set-physical-geography-01-q11",
+      "level": 11,
+      "displayDifficulty": "Difficult",
+      "internalTier": "Expert",
+      "category": "Geography",
+      "tags": [
+        "waterfalls",
+        "Venezuela"
+      ],
+      "prompt": "Angel Falls descends from which type of flat-topped landform?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Karst polje"
+        },
+        {
+          "id": "b",
+          "text": "Drumlin"
+        },
+        {
+          "id": "c",
+          "text": "Atoll"
+        },
+        {
+          "id": "d",
+          "text": "Tepui"
+        }
+      ],
+      "correctChoiceId": "d",
+      "hint": "The waterfall begins high above Venezuela's Guiana Highlands.",
+      "explanation": "Angel Falls drops from the edge of Auyán-tepui, a table-top mountain in Venezuela.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-physical-geography-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-physical-geography-01-q12",
+      "localId": "builtin-set-physical-geography-01-q12",
+      "level": 12,
+      "displayDifficulty": "Difficult",
+      "internalTier": "Expert",
+      "category": "Geography",
+      "tags": [
+        "mountains",
+        "Asia"
+      ],
+      "prompt": "Which mountain range separates the Tarim Basin from the Tibetan Plateau?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Kunlun Mountains"
+        },
+        {
+          "id": "b",
+          "text": "Ural Mountains"
+        },
+        {
+          "id": "c",
+          "text": "Zagros Mountains"
+        },
+        {
+          "id": "d",
+          "text": "Sayan Mountains"
+        }
+      ],
+      "correctChoiceId": "a",
+      "hint": "The range forms much of the plateau's northern rim.",
+      "explanation": "The Kunlun Mountains separate the Tarim Basin to the north from the Tibetan Plateau to the south.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-physical-geography-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-physical-geography-01-q13",
+      "localId": "builtin-set-physical-geography-01-q13",
+      "level": 13,
+      "displayDifficulty": "Difficult",
+      "internalTier": "Elite",
+      "category": "Geography",
+      "tags": [
+        "drainage",
+        "landforms"
+      ],
+      "prompt": "What term describes a drainage basin with no outlet to the ocean?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Orographic"
+        },
+        {
+          "id": "b",
+          "text": "Littoral"
+        },
+        {
+          "id": "c",
+          "text": "Endorheic"
+        },
+        {
+          "id": "d",
+          "text": "Alluvial"
+        }
+      ],
+      "correctChoiceId": "c",
+      "hint": "Water in such a basin terminates inland through evaporation or infiltration.",
+      "explanation": "An endorheic basin retains drainage internally rather than discharging to an ocean.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-physical-geography-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-physical-geography-01-q14",
+      "localId": "builtin-set-physical-geography-01-q14",
+      "level": 14,
+      "displayDifficulty": "Difficult",
+      "internalTier": "Elite",
+      "category": "Geography",
+      "tags": [
+        "tectonics",
+        "Africa"
+      ],
+      "prompt": "At the Afar Triple Junction, the East African Rift meets which two spreading systems?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Alpine and Carpathian rifts"
+        },
+        {
+          "id": "b",
+          "text": "Red Sea and Gulf of Aden rifts"
+        },
+        {
+          "id": "c",
+          "text": "Baikal and West Siberian rifts"
+        },
+        {
+          "id": "d",
+          "text": "Rhine and Oslo rifts"
+        }
+      ],
+      "correctChoiceId": "b",
+      "hint": "Both systems are associated with waters bordering the Horn of Africa.",
+      "explanation": "The Afar Triple Junction joins the East African, Red Sea, and Gulf of Aden rift systems.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-physical-geography-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-physical-geography-01-q15",
+      "localId": "builtin-set-physical-geography-01-q15",
+      "level": 15,
+      "displayDifficulty": "Millionaire",
+      "internalTier": "Millionaire",
+      "category": "Geography",
+      "tags": [
+        "watersheds",
+        "North America"
+      ],
+      "prompt": "Water from Triple Divide Peak in Montana can ultimately reach which three bodies of water?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Pacific Ocean, Arctic Ocean, and Great Salt Lake"
+        },
+        {
+          "id": "b",
+          "text": "Atlantic Ocean, Lake Superior, and Gulf of California"
+        },
+        {
+          "id": "c",
+          "text": "Hudson Bay, Arctic Ocean, and Gulf of California"
+        },
+        {
+          "id": "d",
+          "text": "Pacific Ocean, Gulf of Mexico, and Hudson Bay"
+        }
+      ],
+      "correctChoiceId": "d",
+      "hint": "Its three drainage routes use the Columbia, Mississippi–Missouri, and Saskatchewan systems.",
+      "explanation": "Drainage from Triple Divide Peak reaches the Pacific, the Gulf of Mexico, and Hudson Bay.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-physical-geography-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-borders-geography-01-q01",
+      "localId": "builtin-set-borders-geography-01-q01",
+      "level": 1,
+      "displayDifficulty": "Easy",
+      "internalTier": "Foundation",
+      "category": "Geography",
+      "tags": [
+        "borders",
+        "North America"
+      ],
+      "prompt": "Which two countries share the world's longest international land border?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "China and Russia"
+        },
+        {
+          "id": "b",
+          "text": "Argentina and Chile"
+        },
+        {
+          "id": "c",
+          "text": "Canada and the United States"
+        },
+        {
+          "id": "d",
+          "text": "India and Bangladesh"
+        }
+      ],
+      "correctChoiceId": "c",
+      "hint": "The border includes a long section along the 49th parallel.",
+      "explanation": "Canada and the United States share the world's longest international land boundary.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-borders-geography-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-borders-geography-01-q02",
+      "localId": "builtin-set-borders-geography-01-q02",
+      "level": 2,
+      "displayDifficulty": "Easy",
+      "internalTier": "Foundation",
+      "category": "Geography",
+      "tags": [
+        "languages",
+        "Brazil"
+      ],
+      "prompt": "Which language is the official language of Brazil?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Spanish"
+        },
+        {
+          "id": "b",
+          "text": "Portuguese"
+        },
+        {
+          "id": "c",
+          "text": "French"
+        },
+        {
+          "id": "d",
+          "text": "Italian"
+        }
+      ],
+      "correctChoiceId": "b",
+      "hint": "Brazil was colonized by a different Iberian power from most of its neighbors.",
+      "explanation": "Portuguese is Brazil's official language.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-borders-geography-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-borders-geography-01-q03",
+      "localId": "builtin-set-borders-geography-01-q03",
+      "level": 3,
+      "displayDifficulty": "Easy",
+      "internalTier": "Foundation",
+      "category": "Geography",
+      "tags": [
+        "isthmuses",
+        "Panama"
+      ],
+      "prompt": "The Isthmus of Panama connects North America with which continent?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Europe"
+        },
+        {
+          "id": "b",
+          "text": "Asia"
+        },
+        {
+          "id": "c",
+          "text": "Africa"
+        },
+        {
+          "id": "d",
+          "text": "South America"
+        }
+      ],
+      "correctChoiceId": "d",
+      "hint": "The isthmus forms Central America's southern end.",
+      "explanation": "The Isthmus of Panama is the land bridge between North and South America.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-borders-geography-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-borders-geography-01-q04",
+      "localId": "builtin-set-borders-geography-01-q04",
+      "level": 4,
+      "displayDifficulty": "Easy",
+      "internalTier": "Accessible",
+      "category": "Geography",
+      "tags": [
+        "borders",
+        "West Africa"
+      ],
+      "prompt": "Apart from its Atlantic coast, The Gambia is almost entirely surrounded by which country?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Senegal"
+        },
+        {
+          "id": "b",
+          "text": "Guinea"
+        },
+        {
+          "id": "c",
+          "text": "Mali"
+        },
+        {
+          "id": "d",
+          "text": "Mauritania"
+        }
+      ],
+      "correctChoiceId": "a",
+      "hint": "The neighboring country lies both north and south of The Gambia.",
+      "explanation": "Senegal surrounds The Gambia on every landward side.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-borders-geography-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-borders-geography-01-q05",
+      "localId": "builtin-set-borders-geography-01-q05",
+      "level": 5,
+      "displayDifficulty": "Easy",
+      "internalTier": "Accessible",
+      "category": "Geography",
+      "tags": [
+        "capitals",
+        "West Africa"
+      ],
+      "prompt": "Ouagadougou is the capital of which country?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Benin"
+        },
+        {
+          "id": "b",
+          "text": "Niger"
+        },
+        {
+          "id": "c",
+          "text": "Burkina Faso"
+        },
+        {
+          "id": "d",
+          "text": "Togo"
+        }
+      ],
+      "correctChoiceId": "c",
+      "hint": "The landlocked country was formerly called Upper Volta.",
+      "explanation": "Ouagadougou is the capital and largest city of Burkina Faso.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-borders-geography-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-borders-geography-01-q06",
+      "localId": "builtin-set-borders-geography-01-q06",
+      "level": 6,
+      "displayDifficulty": "Moderate",
+      "internalTier": "Intermediate",
+      "category": "Geography",
+      "tags": [
+        "exclaves",
+        "Europe"
+      ],
+      "prompt": "Kaliningrad is an exclave of which country?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Poland"
+        },
+        {
+          "id": "b",
+          "text": "Russia"
+        },
+        {
+          "id": "c",
+          "text": "Lithuania"
+        },
+        {
+          "id": "d",
+          "text": "Belarus"
+        }
+      ],
+      "correctChoiceId": "b",
+      "hint": "It is separated from the rest of its country by Lithuania and Belarus.",
+      "explanation": "Kaliningrad Oblast is a Russian exclave on the Baltic Sea.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-borders-geography-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-borders-geography-01-q07",
+      "localId": "builtin-set-borders-geography-01-q07",
+      "level": 7,
+      "displayDifficulty": "Moderate",
+      "internalTier": "Intermediate",
+      "category": "Geography",
+      "tags": [
+        "exclaves",
+        "North America"
+      ],
+      "prompt": "Point Roberts, reachable by land from the rest of its country only through Canada, belongs to which country?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Canada"
+        },
+        {
+          "id": "b",
+          "text": "Mexico"
+        },
+        {
+          "id": "c",
+          "text": "France"
+        },
+        {
+          "id": "d",
+          "text": "United States"
+        }
+      ],
+      "correctChoiceId": "d",
+      "hint": "Traveling there by land requires crossing the Canadian border.",
+      "explanation": "Point Roberts belongs to Washington state but is connected by land only to British Columbia.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-borders-geography-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-borders-geography-01-q08",
+      "localId": "builtin-set-borders-geography-01-q08",
+      "level": 8,
+      "displayDifficulty": "Moderate",
+      "internalTier": "Intermediate",
+      "category": "Geography",
+      "tags": [
+        "exclaves",
+        "Arabian Peninsula"
+      ],
+      "prompt": "The Musandam Peninsula is an exclave of which country?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Oman"
+        },
+        {
+          "id": "b",
+          "text": "Yemen"
+        },
+        {
+          "id": "c",
+          "text": "Saudi Arabia"
+        },
+        {
+          "id": "d",
+          "text": "Qatar"
+        }
+      ],
+      "correctChoiceId": "a",
+      "hint": "It overlooks the Strait of Hormuz.",
+      "explanation": "Musandam is separated from the rest of Oman by the United Arab Emirates.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-borders-geography-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-borders-geography-01-q09",
+      "localId": "builtin-set-borders-geography-01-q09",
+      "level": 9,
+      "displayDifficulty": "Moderate",
+      "internalTier": "Advanced",
+      "category": "Geography",
+      "tags": [
+        "enclaves",
+        "Belgium",
+        "Netherlands"
+      ],
+      "prompt": "Baarle-Hertog consists of Belgian enclaves within which country?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Luxembourg"
+        },
+        {
+          "id": "b",
+          "text": "Germany"
+        },
+        {
+          "id": "c",
+          "text": "Netherlands"
+        },
+        {
+          "id": "d",
+          "text": "France"
+        }
+      ],
+      "correctChoiceId": "c",
+      "hint": "Some of the enclaves themselves contain pieces of Baarle-Nassau.",
+      "explanation": "Baarle-Hertog is a Belgian municipality composed largely of enclaves in the Netherlands.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-borders-geography-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-borders-geography-01-q10",
+      "localId": "builtin-set-borders-geography-01-q10",
+      "level": 10,
+      "displayDifficulty": "Moderate",
+      "internalTier": "Advanced",
+      "category": "Geography",
+      "tags": [
+        "exclaves",
+        "Spain",
+        "France"
+      ],
+      "prompt": "The town of Llívia is a Spanish exclave surrounded by which country?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Portugal"
+        },
+        {
+          "id": "b",
+          "text": "France"
+        },
+        {
+          "id": "c",
+          "text": "Andorra"
+        },
+        {
+          "id": "d",
+          "text": "Morocco"
+        }
+      ],
+      "correctChoiceId": "b",
+      "hint": "It lies in the Pyrenees just beyond Spain's main border.",
+      "explanation": "Llívia is Spanish territory surrounded by France.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-borders-geography-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-borders-geography-01-q11",
+      "localId": "builtin-set-borders-geography-01-q11",
+      "level": 11,
+      "displayDifficulty": "Difficult",
+      "internalTier": "Expert",
+      "category": "Geography",
+      "tags": [
+        "enclaves",
+        "Italy",
+        "Switzerland"
+      ],
+      "prompt": "Campione d'Italia is an Italian enclave within which country?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Austria"
+        },
+        {
+          "id": "b",
+          "text": "Slovenia"
+        },
+        {
+          "id": "c",
+          "text": "San Marino"
+        },
+        {
+          "id": "d",
+          "text": "Switzerland"
+        }
+      ],
+      "correctChoiceId": "d",
+      "hint": "The enclave sits beside Lake Lugano.",
+      "explanation": "Campione d'Italia is Italian territory enclosed by Switzerland.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-borders-geography-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-borders-geography-01-q12",
+      "localId": "builtin-set-borders-geography-01-q12",
+      "level": 12,
+      "displayDifficulty": "Difficult",
+      "internalTier": "Expert",
+      "category": "Geography",
+      "tags": [
+        "enclaves",
+        "Belgium",
+        "Germany"
+      ],
+      "prompt": "Sovereignty over the Vennbahn railway created several enclaves of Germany inside which country?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Belgium"
+        },
+        {
+          "id": "b",
+          "text": "Denmark"
+        },
+        {
+          "id": "c",
+          "text": "Czechia"
+        },
+        {
+          "id": "d",
+          "text": "Switzerland"
+        }
+      ],
+      "correctChoiceId": "a",
+      "hint": "The railway territory changed hands after the First World War.",
+      "explanation": "Belgian sovereignty over parts of the Vennbahn left several small German enclaves west of the line.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-borders-geography-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-borders-geography-01-q13",
+      "localId": "builtin-set-borders-geography-01-q13",
+      "level": 13,
+      "displayDifficulty": "Difficult",
+      "internalTier": "Elite",
+      "category": "Geography",
+      "tags": [
+        "counter-enclaves",
+        "Arabian Peninsula"
+      ],
+      "prompt": "Nahwa, a counter-enclave inside Oman's Madha enclave, belongs to which country?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Bahrain"
+        },
+        {
+          "id": "b",
+          "text": "Saudi Arabia"
+        },
+        {
+          "id": "c",
+          "text": "United Arab Emirates"
+        },
+        {
+          "id": "d",
+          "text": "Yemen"
+        }
+      ],
+      "correctChoiceId": "c",
+      "hint": "The surrounding Madha enclave lies within the same federation.",
+      "explanation": "Nahwa belongs to the United Arab Emirates and is enclosed by Oman's Madha enclave.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-borders-geography-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-borders-geography-01-q14",
+      "localId": "builtin-set-borders-geography-01-q14",
+      "level": 14,
+      "displayDifficulty": "Difficult",
+      "internalTier": "Elite",
+      "category": "Geography",
+      "tags": [
+        "hemispheres",
+        "Kiribati"
+      ],
+      "prompt": "Which sovereign country has territory in all four geographic hemispheres?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Indonesia"
+        },
+        {
+          "id": "b",
+          "text": "Ecuador"
+        },
+        {
+          "id": "c",
+          "text": "Maldives"
+        },
+        {
+          "id": "d",
+          "text": "Kiribati"
+        }
+      ],
+      "correctChoiceId": "d",
+      "hint": "Its islands cross both the Equator and the 180th meridian.",
+      "explanation": "Kiribati spans north and south of the Equator and east and west of the 180th meridian.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-borders-geography-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-borders-geography-01-q15",
+      "localId": "builtin-set-borders-geography-01-q15",
+      "level": 15,
+      "displayDifficulty": "Millionaire",
+      "internalTier": "Millionaire",
+      "category": "Geography",
+      "tags": [
+        "landlocked countries",
+        "political geography"
+      ],
+      "prompt": "Which pair are the world's only two doubly landlocked sovereign countries?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Andorra and Mongolia"
+        },
+        {
+          "id": "b",
+          "text": "Liechtenstein and Uzbekistan"
+        },
+        {
+          "id": "c",
+          "text": "Nepal and Paraguay"
+        },
+        {
+          "id": "d",
+          "text": "Bhutan and Moldova"
+        }
+      ],
+      "correctChoiceId": "b",
+      "hint": "Every country bordering either member of the pair is itself landlocked.",
+      "explanation": "Liechtenstein and Uzbekistan are each surrounded entirely by landlocked countries.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-borders-geography-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-islands-and-seas-01-q01",
+      "localId": "builtin-set-islands-and-seas-01-q01",
+      "level": 1,
+      "displayDifficulty": "Easy",
+      "internalTier": "Foundation",
+      "category": "Geography",
+      "tags": [
+        "islands",
+        "Indonesia"
+      ],
+      "prompt": "Bali is an island of which country?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Indonesia"
+        },
+        {
+          "id": "b",
+          "text": "Thailand"
+        },
+        {
+          "id": "c",
+          "text": "Philippines"
+        },
+        {
+          "id": "d",
+          "text": "Sri Lanka"
+        }
+      ],
+      "correctChoiceId": "a",
+      "hint": "The country contains thousands of islands between Asia and Australia.",
+      "explanation": "Bali is one of Indonesia's best-known islands.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-islands-and-seas-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-islands-and-seas-01-q02",
+      "localId": "builtin-set-islands-and-seas-01-q02",
+      "level": 2,
+      "displayDifficulty": "Easy",
+      "internalTier": "Foundation",
+      "category": "Geography",
+      "tags": [
+        "islands",
+        "Hawaii"
+      ],
+      "prompt": "What is the largest island in the Hawaiian archipelago?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Maui"
+        },
+        {
+          "id": "b",
+          "text": "Oʻahu"
+        },
+        {
+          "id": "c",
+          "text": "Kauaʻi"
+        },
+        {
+          "id": "d",
+          "text": "Hawaiʻi"
+        }
+      ],
+      "correctChoiceId": "d",
+      "hint": "It is commonly called the Big Island.",
+      "explanation": "Hawaiʻi, or the Big Island, is the archipelago's largest island.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-islands-and-seas-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-islands-and-seas-01-q03",
+      "localId": "builtin-set-islands-and-seas-01-q03",
+      "level": 3,
+      "displayDifficulty": "Easy",
+      "internalTier": "Foundation",
+      "category": "Geography",
+      "tags": [
+        "straits",
+        "New Zealand"
+      ],
+      "prompt": "Which strait separates New Zealand's North and South Islands?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Bass Strait"
+        },
+        {
+          "id": "b",
+          "text": "Torres Strait"
+        },
+        {
+          "id": "c",
+          "text": "Cook Strait"
+        },
+        {
+          "id": "d",
+          "text": "Luzon Strait"
+        }
+      ],
+      "correctChoiceId": "c",
+      "hint": "It is named for a British explorer.",
+      "explanation": "Cook Strait separates New Zealand's two principal islands.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-islands-and-seas-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-islands-and-seas-01-q04",
+      "localId": "builtin-set-islands-and-seas-01-q04",
+      "level": 4,
+      "displayDifficulty": "Easy",
+      "internalTier": "Accessible",
+      "category": "Geography",
+      "tags": [
+        "islands",
+        "Indian Ocean"
+      ],
+      "prompt": "Madagascar lies in which ocean?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Atlantic Ocean"
+        },
+        {
+          "id": "b",
+          "text": "Indian Ocean"
+        },
+        {
+          "id": "c",
+          "text": "Pacific Ocean"
+        },
+        {
+          "id": "d",
+          "text": "Arctic Ocean"
+        }
+      ],
+      "correctChoiceId": "b",
+      "hint": "It lies east of Mozambique.",
+      "explanation": "Madagascar is an island country in the western Indian Ocean.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-islands-and-seas-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-islands-and-seas-01-q05",
+      "localId": "builtin-set-islands-and-seas-01-q05",
+      "level": 5,
+      "displayDifficulty": "Easy",
+      "internalTier": "Accessible",
+      "category": "Geography",
+      "tags": [
+        "islands",
+        "Japan"
+      ],
+      "prompt": "Which is the northernmost of Japan's four main islands?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Hokkaido"
+        },
+        {
+          "id": "b",
+          "text": "Honshu"
+        },
+        {
+          "id": "c",
+          "text": "Shikoku"
+        },
+        {
+          "id": "d",
+          "text": "Kyushu"
+        }
+      ],
+      "correctChoiceId": "a",
+      "hint": "Sapporo is its largest city.",
+      "explanation": "Hokkaido is the northernmost of Japan's four main islands.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-islands-and-seas-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-islands-and-seas-01-q06",
+      "localId": "builtin-set-islands-and-seas-01-q06",
+      "level": 6,
+      "displayDifficulty": "Moderate",
+      "internalTier": "Intermediate",
+      "category": "Geography",
+      "tags": [
+        "islands",
+        "Southeast Asia"
+      ],
+      "prompt": "Which three countries share the island of Borneo?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Indonesia, Philippines, and Singapore"
+        },
+        {
+          "id": "b",
+          "text": "Malaysia, Thailand, and Brunei"
+        },
+        {
+          "id": "c",
+          "text": "Indonesia, Malaysia, and Timor-Leste"
+        },
+        {
+          "id": "d",
+          "text": "Brunei, Indonesia, and Malaysia"
+        }
+      ],
+      "correctChoiceId": "d",
+      "hint": "One is a small sultanate on the island's northern coast.",
+      "explanation": "Borneo is divided among Brunei, Indonesia, and Malaysia.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-islands-and-seas-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-islands-and-seas-01-q07",
+      "localId": "builtin-set-islands-and-seas-01-q07",
+      "level": 7,
+      "displayDifficulty": "Moderate",
+      "internalTier": "Intermediate",
+      "category": "Geography",
+      "tags": [
+        "seas",
+        "Atlantic Ocean"
+      ],
+      "prompt": "Which sea is defined by ocean currents rather than by surrounding land?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Coral Sea"
+        },
+        {
+          "id": "b",
+          "text": "Tasman Sea"
+        },
+        {
+          "id": "c",
+          "text": "Sargasso Sea"
+        },
+        {
+          "id": "d",
+          "text": "Weddell Sea"
+        }
+      ],
+      "correctChoiceId": "c",
+      "hint": "It is named for floating brown algae.",
+      "explanation": "The Sargasso Sea has no land boundary and is instead bounded by Atlantic currents.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-islands-and-seas-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-islands-and-seas-01-q08",
+      "localId": "builtin-set-islands-and-seas-01-q08",
+      "level": 8,
+      "displayDifficulty": "Moderate",
+      "internalTier": "Intermediate",
+      "category": "Geography",
+      "tags": [
+        "capitals",
+        "Palau",
+        "Micronesia"
+      ],
+      "prompt": "Ngerulmud is the capital of which Pacific island country?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Fiji"
+        },
+        {
+          "id": "b",
+          "text": "Palau"
+        },
+        {
+          "id": "c",
+          "text": "Samoa"
+        },
+        {
+          "id": "d",
+          "text": "Vanuatu"
+        }
+      ],
+      "correctChoiceId": "b",
+      "hint": "The country is part of Micronesia and lies east of the Philippines.",
+      "explanation": "Ngerulmud, on Babeldaob island, is the capital of Palau.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-islands-and-seas-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-islands-and-seas-01-q09",
+      "localId": "builtin-set-islands-and-seas-01-q09",
+      "level": 9,
+      "displayDifficulty": "Moderate",
+      "internalTier": "Advanced",
+      "category": "Geography",
+      "tags": [
+        "straits",
+        "Southeast Asia"
+      ],
+      "prompt": "The Strait of Malacca lies between Sumatra and which peninsula?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Malay Peninsula"
+        },
+        {
+          "id": "b",
+          "text": "Korean Peninsula"
+        },
+        {
+          "id": "c",
+          "text": "Kamchatka Peninsula"
+        },
+        {
+          "id": "d",
+          "text": "Indochina Peninsula's eastern coast"
+        }
+      ],
+      "correctChoiceId": "a",
+      "hint": "Singapore lies near the strait's southeastern entrance.",
+      "explanation": "The Strait of Malacca separates Sumatra from the Malay Peninsula.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-islands-and-seas-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-islands-and-seas-01-q10",
+      "localId": "builtin-set-islands-and-seas-01-q10",
+      "level": 10,
+      "displayDifficulty": "Moderate",
+      "internalTier": "Advanced",
+      "category": "Geography",
+      "tags": [
+        "islands",
+        "Yemen"
+      ],
+      "prompt": "The island of Socotra belongs to which country?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Oman"
+        },
+        {
+          "id": "b",
+          "text": "Somalia"
+        },
+        {
+          "id": "c",
+          "text": "Djibouti"
+        },
+        {
+          "id": "d",
+          "text": "Yemen"
+        }
+      ],
+      "correctChoiceId": "d",
+      "hint": "It lies east of the Horn of Africa near the Gulf of Aden.",
+      "explanation": "Socotra and its surrounding archipelago are part of Yemen.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-islands-and-seas-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-islands-and-seas-01-q11",
+      "localId": "builtin-set-islands-and-seas-01-q11",
+      "level": 11,
+      "displayDifficulty": "Difficult",
+      "internalTier": "Expert",
+      "category": "Geography",
+      "tags": [
+        "archipelagos",
+        "Baltic Sea"
+      ],
+      "prompt": "The autonomous Åland Islands belong to which country?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Sweden"
+        },
+        {
+          "id": "b",
+          "text": "Finland"
+        },
+        {
+          "id": "c",
+          "text": "Estonia"
+        },
+        {
+          "id": "d",
+          "text": "Denmark"
+        }
+      ],
+      "correctChoiceId": "b",
+      "hint": "The islands are Swedish-speaking but politically associated with another Nordic state.",
+      "explanation": "Åland is an autonomous, demilitarized region of Finland.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-islands-and-seas-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-islands-and-seas-01-q12",
+      "localId": "builtin-set-islands-and-seas-01-q12",
+      "level": 12,
+      "displayDifficulty": "Difficult",
+      "internalTier": "Expert",
+      "category": "Geography",
+      "tags": [
+        "straits",
+        "Oceania"
+      ],
+      "prompt": "Torres Strait separates Australia from which large island?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Borneo"
+        },
+        {
+          "id": "b",
+          "text": "New Caledonia"
+        },
+        {
+          "id": "c",
+          "text": "New Guinea"
+        },
+        {
+          "id": "d",
+          "text": "Tasmania"
+        }
+      ],
+      "correctChoiceId": "c",
+      "hint": "The island's western half belongs to Indonesia.",
+      "explanation": "Torres Strait lies between Australia's Cape York Peninsula and New Guinea.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-islands-and-seas-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-islands-and-seas-01-q13",
+      "localId": "builtin-set-islands-and-seas-01-q13",
+      "level": 13,
+      "displayDifficulty": "Difficult",
+      "internalTier": "Elite",
+      "category": "Geography",
+      "tags": [
+        "straits",
+        "Indonesia"
+      ],
+      "prompt": "The Makassar Strait separates Borneo from which island?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Sulawesi"
+        },
+        {
+          "id": "b",
+          "text": "Java"
+        },
+        {
+          "id": "c",
+          "text": "Luzon"
+        },
+        {
+          "id": "d",
+          "text": "Sumbawa"
+        }
+      ],
+      "correctChoiceId": "a",
+      "hint": "The island to the east has four long peninsulas.",
+      "explanation": "The Makassar Strait runs between Borneo and Sulawesi.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-islands-and-seas-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-islands-and-seas-01-q14",
+      "localId": "builtin-set-islands-and-seas-01-q14",
+      "level": 14,
+      "displayDifficulty": "Difficult",
+      "internalTier": "Elite",
+      "category": "Geography",
+      "tags": [
+        "archipelagos",
+        "Indian Ocean"
+      ],
+      "prompt": "Which three islands form the principal Mascarene Islands?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Mahé, Praslin, and La Digue"
+        },
+        {
+          "id": "b",
+          "text": "Grande Comore, Mohéli, and Anjouan"
+        },
+        {
+          "id": "c",
+          "text": "Zanzibar, Pemba, and Mafia"
+        },
+        {
+          "id": "d",
+          "text": "Mauritius, Réunion, and Rodrigues"
+        }
+      ],
+      "correctChoiceId": "d",
+      "hint": "They lie east of Madagascar.",
+      "explanation": "Mauritius, Réunion, and Rodrigues are the principal islands of the Mascarene group.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-islands-and-seas-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
+    },
+    {
+      "id": "builtin-set-islands-and-seas-01-q15",
+      "localId": "builtin-set-islands-and-seas-01-q15",
+      "level": 15,
+      "displayDifficulty": "Millionaire",
+      "internalTier": "Millionaire",
+      "category": "Geography",
+      "tags": [
+        "archipelagos",
+        "Southern Indian Ocean"
+      ],
+      "prompt": "The Kerguelen Islands form part of which French overseas territory?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "New Caledonia"
+        },
+        {
+          "id": "b",
+          "text": "French Southern and Antarctic Lands"
+        },
+        {
+          "id": "c",
+          "text": "Wallis and Futuna"
+        },
+        {
+          "id": "d",
+          "text": "French Polynesia"
+        }
+      ],
+      "correctChoiceId": "b",
+      "hint": "The territory also administers the Crozet Islands and several subantarctic districts.",
+      "explanation": "The Kerguelen Islands are a district of the French Southern and Antarctic Lands.",
+      "usage": {
+        "freshMix": false,
+        "setIds": [
+          "builtin-set-islands-and-seas-01"
+        ]
+      },
+      "metadata": {
+        "language": "en-US",
+        "author": "OpenAI",
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "verificationNotes": null,
+        "sourceNotes": null,
+        "generatedBy": null,
+        "timeSensitive": false,
+        "validThrough": null
+      },
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true,
+      "normalizationRepairs": []
     }
   ],
   "sets": [
@@ -27059,6 +29632,111 @@
       "sourceFile": "curated_sets_json/curated-006-arts-culture-and-everyday.json",
       "sourceVersion": "1.0.0",
       "enabled": true
+    },
+    {
+      "id": "builtin-set-physical-geography-01",
+      "localId": "builtin-set-physical-geography-01",
+      "title": "Physical Geography: Forces and Features",
+      "description": "Fifteen questions progressing from familiar rivers and mountain ranges to advanced landforms, tectonics, and watersheds.",
+      "theme": "Physical Geography",
+      "tags": [
+        "single-category",
+        "physical geography"
+      ],
+      "questionIds": [
+        "builtin-set-physical-geography-01-q01",
+        "builtin-set-physical-geography-01-q02",
+        "builtin-set-physical-geography-01-q03",
+        "builtin-set-physical-geography-01-q04",
+        "builtin-set-physical-geography-01-q05",
+        "builtin-set-physical-geography-01-q06",
+        "builtin-set-physical-geography-01-q07",
+        "builtin-set-physical-geography-01-q08",
+        "builtin-set-physical-geography-01-q09",
+        "builtin-set-physical-geography-01-q10",
+        "builtin-set-physical-geography-01-q11",
+        "builtin-set-physical-geography-01-q12",
+        "builtin-set-physical-geography-01-q13",
+        "builtin-set-physical-geography-01-q14",
+        "builtin-set-physical-geography-01-q15"
+      ],
+      "audience": null,
+      "difficultyNote": null,
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true
+    },
+    {
+      "id": "builtin-set-borders-geography-01",
+      "localId": "builtin-set-borders-geography-01",
+      "title": "Borders and Human Geography",
+      "description": "Fifteen questions moving from familiar borders and languages to enclaves, counter-enclaves, and unusual territorial patterns.",
+      "theme": "Political and Human Geography",
+      "tags": [
+        "single-category",
+        "political geography"
+      ],
+      "questionIds": [
+        "builtin-set-borders-geography-01-q01",
+        "builtin-set-borders-geography-01-q02",
+        "builtin-set-borders-geography-01-q03",
+        "builtin-set-borders-geography-01-q04",
+        "builtin-set-borders-geography-01-q05",
+        "builtin-set-borders-geography-01-q06",
+        "builtin-set-borders-geography-01-q07",
+        "builtin-set-borders-geography-01-q08",
+        "builtin-set-borders-geography-01-q09",
+        "builtin-set-borders-geography-01-q10",
+        "builtin-set-borders-geography-01-q11",
+        "builtin-set-borders-geography-01-q12",
+        "builtin-set-borders-geography-01-q13",
+        "builtin-set-borders-geography-01-q14",
+        "builtin-set-borders-geography-01-q15"
+      ],
+      "audience": null,
+      "difficultyNote": null,
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true
+    },
+    {
+      "id": "builtin-set-islands-and-seas-01",
+      "localId": "builtin-set-islands-and-seas-01",
+      "title": "Islands, Seas, and Archipelagos",
+      "description": "Fifteen questions traveling from famous islands to remote straits, autonomous archipelagos, and subantarctic territories.",
+      "theme": "Island and Maritime Geography",
+      "tags": [
+        "single-category",
+        "islands and seas"
+      ],
+      "questionIds": [
+        "builtin-set-islands-and-seas-01-q01",
+        "builtin-set-islands-and-seas-01-q02",
+        "builtin-set-islands-and-seas-01-q03",
+        "builtin-set-islands-and-seas-01-q04",
+        "builtin-set-islands-and-seas-01-q05",
+        "builtin-set-islands-and-seas-01-q06",
+        "builtin-set-islands-and-seas-01-q07",
+        "builtin-set-islands-and-seas-01-q08",
+        "builtin-set-islands-and-seas-01-q09",
+        "builtin-set-islands-and-seas-01-q10",
+        "builtin-set-islands-and-seas-01-q11",
+        "builtin-set-islands-and-seas-01-q12",
+        "builtin-set-islands-and-seas-01-q13",
+        "builtin-set-islands-and-seas-01-q14",
+        "builtin-set-islands-and-seas-01-q15"
+      ],
+      "audience": null,
+      "difficultyNote": null,
+      "origin": "built-in",
+      "sourcePackId": "builtin-curated-release-001-group-007",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "sourceVersion": "1.0.0",
+      "enabled": true
     }
   ],
   "sources": [
@@ -27384,6 +30062,30 @@
         "timeSensitiveQuestionCount": 0
       },
       "sourceSha256": "969974868a3538df4c0e83e193a63b652e384fa7098a72658dbaff9b76bf0078"
+    },
+    {
+      "id": "builtin-curated-release-001-group-007",
+      "title": "Geography Collection: Land, Borders, and Islands",
+      "description": "Three curated 15-question geography sets covering physical geography, political boundaries, and islands and seas.",
+      "version": "1.0.0",
+      "schemaVersion": "1.0.0",
+      "language": "en-US",
+      "contentType": "curated-sets",
+      "categories": [
+        "Geography"
+      ],
+      "origin": "built-in",
+      "sourceFile": "curated_sets_json/curated-007-geography-collection.json",
+      "enabled": true,
+      "metadata": {
+        "author": "OpenAI",
+        "questionCount": 45,
+        "setCount": 3,
+        "reviewStatus": "assistant-reviewed-draft",
+        "humanReviewRecommended": true,
+        "timeSensitiveQuestionCount": 0
+      },
+      "sourceSha256": "43a53aa9e2adef9f7b8ae1eaef7cdb7420c623e635a063a895533f33139f1a1c"
     }
   ],
   "indexes": {
@@ -27420,7 +30122,10 @@
         "builtin-set-world-civilizations-01-q01",
         "builtin-set-stem-01-q01",
         "builtin-set-arts-and-culture-01-q01",
-        "builtin-set-everyday-expert-01-q01"
+        "builtin-set-everyday-expert-01-q01",
+        "builtin-set-physical-geography-01-q01",
+        "builtin-set-borders-geography-01-q01",
+        "builtin-set-islands-and-seas-01-q01"
       ],
       "2": [
         "builtin-pool-ancient-history-02",
@@ -27454,7 +30159,10 @@
         "builtin-set-world-civilizations-01-q02",
         "builtin-set-stem-01-q02",
         "builtin-set-arts-and-culture-01-q02",
-        "builtin-set-everyday-expert-01-q02"
+        "builtin-set-everyday-expert-01-q02",
+        "builtin-set-physical-geography-01-q02",
+        "builtin-set-borders-geography-01-q02",
+        "builtin-set-islands-and-seas-01-q02"
       ],
       "3": [
         "builtin-pool-ancient-history-03",
@@ -27488,7 +30196,10 @@
         "builtin-set-world-civilizations-01-q03",
         "builtin-set-stem-01-q03",
         "builtin-set-arts-and-culture-01-q03",
-        "builtin-set-everyday-expert-01-q03"
+        "builtin-set-everyday-expert-01-q03",
+        "builtin-set-physical-geography-01-q03",
+        "builtin-set-borders-geography-01-q03",
+        "builtin-set-islands-and-seas-01-q03"
       ],
       "4": [
         "builtin-pool-ancient-history-04",
@@ -27522,7 +30233,10 @@
         "builtin-set-world-civilizations-01-q04",
         "builtin-set-stem-01-q04",
         "builtin-set-arts-and-culture-01-q04",
-        "builtin-set-everyday-expert-01-q04"
+        "builtin-set-everyday-expert-01-q04",
+        "builtin-set-physical-geography-01-q04",
+        "builtin-set-borders-geography-01-q04",
+        "builtin-set-islands-and-seas-01-q04"
       ],
       "5": [
         "builtin-pool-ancient-history-05",
@@ -27556,7 +30270,10 @@
         "builtin-set-world-civilizations-01-q05",
         "builtin-set-stem-01-q05",
         "builtin-set-arts-and-culture-01-q05",
-        "builtin-set-everyday-expert-01-q05"
+        "builtin-set-everyday-expert-01-q05",
+        "builtin-set-physical-geography-01-q05",
+        "builtin-set-borders-geography-01-q05",
+        "builtin-set-islands-and-seas-01-q05"
       ],
       "6": [
         "builtin-pool-ancient-history-06",
@@ -27590,7 +30307,10 @@
         "builtin-set-world-civilizations-01-q06",
         "builtin-set-stem-01-q06",
         "builtin-set-arts-and-culture-01-q06",
-        "builtin-set-everyday-expert-01-q06"
+        "builtin-set-everyday-expert-01-q06",
+        "builtin-set-physical-geography-01-q06",
+        "builtin-set-borders-geography-01-q06",
+        "builtin-set-islands-and-seas-01-q06"
       ],
       "7": [
         "builtin-pool-ancient-history-07",
@@ -27624,7 +30344,10 @@
         "builtin-set-world-civilizations-01-q07",
         "builtin-set-stem-01-q07",
         "builtin-set-arts-and-culture-01-q07",
-        "builtin-set-everyday-expert-01-q07"
+        "builtin-set-everyday-expert-01-q07",
+        "builtin-set-physical-geography-01-q07",
+        "builtin-set-borders-geography-01-q07",
+        "builtin-set-islands-and-seas-01-q07"
       ],
       "8": [
         "builtin-pool-ancient-history-08",
@@ -27658,7 +30381,10 @@
         "builtin-set-world-civilizations-01-q08",
         "builtin-set-stem-01-q08",
         "builtin-set-arts-and-culture-01-q08",
-        "builtin-set-everyday-expert-01-q08"
+        "builtin-set-everyday-expert-01-q08",
+        "builtin-set-physical-geography-01-q08",
+        "builtin-set-borders-geography-01-q08",
+        "builtin-set-islands-and-seas-01-q08"
       ],
       "9": [
         "builtin-pool-ancient-history-09",
@@ -27692,7 +30418,10 @@
         "builtin-set-world-civilizations-01-q09",
         "builtin-set-stem-01-q09",
         "builtin-set-arts-and-culture-01-q09",
-        "builtin-set-everyday-expert-01-q09"
+        "builtin-set-everyday-expert-01-q09",
+        "builtin-set-physical-geography-01-q09",
+        "builtin-set-borders-geography-01-q09",
+        "builtin-set-islands-and-seas-01-q09"
       ],
       "10": [
         "builtin-pool-ancient-history-10",
@@ -27726,7 +30455,10 @@
         "builtin-set-world-civilizations-01-q10",
         "builtin-set-stem-01-q10",
         "builtin-set-arts-and-culture-01-q10",
-        "builtin-set-everyday-expert-01-q10"
+        "builtin-set-everyday-expert-01-q10",
+        "builtin-set-physical-geography-01-q10",
+        "builtin-set-borders-geography-01-q10",
+        "builtin-set-islands-and-seas-01-q10"
       ],
       "11": [
         "builtin-pool-ancient-history-11",
@@ -27760,7 +30492,10 @@
         "builtin-set-world-civilizations-01-q11",
         "builtin-set-stem-01-q11",
         "builtin-set-arts-and-culture-01-q11",
-        "builtin-set-everyday-expert-01-q11"
+        "builtin-set-everyday-expert-01-q11",
+        "builtin-set-physical-geography-01-q11",
+        "builtin-set-borders-geography-01-q11",
+        "builtin-set-islands-and-seas-01-q11"
       ],
       "12": [
         "builtin-pool-ancient-history-12",
@@ -27794,7 +30529,10 @@
         "builtin-set-world-civilizations-01-q12",
         "builtin-set-stem-01-q12",
         "builtin-set-arts-and-culture-01-q12",
-        "builtin-set-everyday-expert-01-q12"
+        "builtin-set-everyday-expert-01-q12",
+        "builtin-set-physical-geography-01-q12",
+        "builtin-set-borders-geography-01-q12",
+        "builtin-set-islands-and-seas-01-q12"
       ],
       "13": [
         "builtin-pool-ancient-history-13",
@@ -27828,7 +30566,10 @@
         "builtin-set-world-civilizations-01-q13",
         "builtin-set-stem-01-q13",
         "builtin-set-arts-and-culture-01-q13",
-        "builtin-set-everyday-expert-01-q13"
+        "builtin-set-everyday-expert-01-q13",
+        "builtin-set-physical-geography-01-q13",
+        "builtin-set-borders-geography-01-q13",
+        "builtin-set-islands-and-seas-01-q13"
       ],
       "14": [
         "builtin-pool-ancient-history-14",
@@ -27862,7 +30603,10 @@
         "builtin-set-world-civilizations-01-q14",
         "builtin-set-stem-01-q14",
         "builtin-set-arts-and-culture-01-q14",
-        "builtin-set-everyday-expert-01-q14"
+        "builtin-set-everyday-expert-01-q14",
+        "builtin-set-physical-geography-01-q14",
+        "builtin-set-borders-geography-01-q14",
+        "builtin-set-islands-and-seas-01-q14"
       ],
       "15": [
         "builtin-pool-ancient-history-15",
@@ -27896,7 +30640,10 @@
         "builtin-set-world-civilizations-01-q15",
         "builtin-set-stem-01-q15",
         "builtin-set-arts-and-culture-01-q15",
-        "builtin-set-everyday-expert-01-q15"
+        "builtin-set-everyday-expert-01-q15",
+        "builtin-set-physical-geography-01-q15",
+        "builtin-set-borders-geography-01-q15",
+        "builtin-set-islands-and-seas-01-q15"
       ]
     },
     "byCategory": {
@@ -28009,7 +30756,52 @@
         "builtin-set-general-knowledge-02-q03",
         "builtin-set-world-civilizations-01-q01",
         "builtin-set-world-civilizations-01-q13",
-        "builtin-set-everyday-expert-01-q05"
+        "builtin-set-everyday-expert-01-q05",
+        "builtin-set-physical-geography-01-q01",
+        "builtin-set-physical-geography-01-q02",
+        "builtin-set-physical-geography-01-q03",
+        "builtin-set-physical-geography-01-q04",
+        "builtin-set-physical-geography-01-q05",
+        "builtin-set-physical-geography-01-q06",
+        "builtin-set-physical-geography-01-q07",
+        "builtin-set-physical-geography-01-q08",
+        "builtin-set-physical-geography-01-q09",
+        "builtin-set-physical-geography-01-q10",
+        "builtin-set-physical-geography-01-q11",
+        "builtin-set-physical-geography-01-q12",
+        "builtin-set-physical-geography-01-q13",
+        "builtin-set-physical-geography-01-q14",
+        "builtin-set-physical-geography-01-q15",
+        "builtin-set-borders-geography-01-q01",
+        "builtin-set-borders-geography-01-q02",
+        "builtin-set-borders-geography-01-q03",
+        "builtin-set-borders-geography-01-q04",
+        "builtin-set-borders-geography-01-q05",
+        "builtin-set-borders-geography-01-q06",
+        "builtin-set-borders-geography-01-q07",
+        "builtin-set-borders-geography-01-q08",
+        "builtin-set-borders-geography-01-q09",
+        "builtin-set-borders-geography-01-q10",
+        "builtin-set-borders-geography-01-q11",
+        "builtin-set-borders-geography-01-q12",
+        "builtin-set-borders-geography-01-q13",
+        "builtin-set-borders-geography-01-q14",
+        "builtin-set-borders-geography-01-q15",
+        "builtin-set-islands-and-seas-01-q01",
+        "builtin-set-islands-and-seas-01-q02",
+        "builtin-set-islands-and-seas-01-q03",
+        "builtin-set-islands-and-seas-01-q04",
+        "builtin-set-islands-and-seas-01-q05",
+        "builtin-set-islands-and-seas-01-q06",
+        "builtin-set-islands-and-seas-01-q07",
+        "builtin-set-islands-and-seas-01-q08",
+        "builtin-set-islands-and-seas-01-q09",
+        "builtin-set-islands-and-seas-01-q10",
+        "builtin-set-islands-and-seas-01-q11",
+        "builtin-set-islands-and-seas-01-q12",
+        "builtin-set-islands-and-seas-01-q13",
+        "builtin-set-islands-and-seas-01-q14",
+        "builtin-set-islands-and-seas-01-q15"
       ],
       "Astronomy and Space": [
         "builtin-pool-astronomy-and-space-01",
@@ -28449,7 +31241,10 @@
         "builtin-set-geography-01-q15",
         "builtin-set-world-civilizations-01-q01",
         "builtin-set-world-civilizations-01-q13",
-        "builtin-set-world-civilizations-01-q15"
+        "builtin-set-world-civilizations-01-q15",
+        "builtin-set-physical-geography-01-q03",
+        "builtin-set-physical-geography-01-q08",
+        "builtin-set-physical-geography-01-q14"
       ],
       "Alexander": [
         "builtin-set-ancient-history-01-q05",
@@ -28473,8 +31268,17 @@
         "builtin-pool-film-and-television-03",
         "builtin-set-general-knowledge-02-q07"
       ],
+      "Arabian Peninsula": [
+        "builtin-set-borders-geography-01-q08",
+        "builtin-set-borders-geography-01-q13"
+      ],
       "Arabic": [
         "builtin-set-world-civilizations-01-q08"
+      ],
+      "archipelagos": [
+        "builtin-set-islands-and-seas-01-q11",
+        "builtin-set-islands-and-seas-01-q14",
+        "builtin-set-islands-and-seas-01-q15"
       ],
       "architecture": [
         "builtin-pool-art-and-culture-07",
@@ -28494,7 +31298,8 @@
       "Asia": [
         "builtin-set-geography-01-q05",
         "builtin-set-geography-01-q13",
-        "builtin-set-world-civilizations-01-q04"
+        "builtin-set-world-civilizations-01-q04",
+        "builtin-set-physical-geography-01-q12"
       ],
       "asteroids": [
         "builtin-pool-astronomy-and-space-08"
@@ -28512,6 +31317,9 @@
       "athletics": [
         "builtin-pool-sports-and-games-11"
       ],
+      "Atlantic Ocean": [
+        "builtin-set-islands-and-seas-01-q07"
+      ],
       "atoms": [
         "builtin-set-science-01-q06",
         "builtin-set-general-knowledge-01-q14"
@@ -28521,7 +31329,8 @@
       ],
       "Australia": [
         "builtin-set-general-knowledge-02-q03",
-        "builtin-set-general-knowledge-02-q09"
+        "builtin-set-general-knowledge-02-q09",
+        "builtin-set-physical-geography-01-q06"
       ],
       "Austria": [
         "builtin-pool-geography-06"
@@ -28543,6 +31352,9 @@
         "builtin-pool-food-and-drink-02",
         "builtin-pool-food-and-drink-14",
         "builtin-set-everyday-expert-01-q08"
+      ],
+      "Baltic Sea": [
+        "builtin-set-islands-and-seas-01-q11"
       ],
       "Bandung": [
         "builtin-pool-modern-history-09"
@@ -28568,6 +31380,10 @@
       ],
       "Beethoven": [
         "builtin-pool-music-02"
+      ],
+      "Belgium": [
+        "builtin-set-borders-geography-01-q09",
+        "builtin-set-borders-geography-01-q12"
       ],
       "binary": [
         "builtin-pool-technology-04"
@@ -28596,9 +31412,19 @@
       "board games": [
         "builtin-pool-sports-and-games-12"
       ],
+      "Bolivia": [
+        "builtin-set-physical-geography-01-q09"
+      ],
       "bonds": [
         "builtin-pool-business-and-economics-06",
         "builtin-set-everyday-expert-01-q15"
+      ],
+      "borders": [
+        "builtin-set-borders-geography-01-q01",
+        "builtin-set-borders-geography-01-q04"
+      ],
+      "Brazil": [
+        "builtin-set-borders-geography-01-q02"
       ],
       "browning": [
         "builtin-pool-food-and-drink-10"
@@ -28622,7 +31448,10 @@
         "builtin-set-geography-01-q01",
         "builtin-set-general-knowledge-01-q02",
         "builtin-set-general-knowledge-02-q03",
-        "builtin-set-world-civilizations-01-q01"
+        "builtin-set-world-civilizations-01-q01",
+        "builtin-set-physical-geography-01-q04",
+        "builtin-set-borders-geography-01-q05",
+        "builtin-set-islands-and-seas-01-q08"
       ],
       "Carthage": [
         "builtin-pool-ancient-history-07",
@@ -28766,6 +31595,9 @@
         "builtin-set-astronomy-01-q08",
         "builtin-set-astronomy-01-q09"
       ],
+      "counter-enclaves": [
+        "builtin-set-borders-geography-01-q13"
+      ],
       "courts": [
         "builtin-pool-politics-and-world-affairs-09"
       ],
@@ -28889,6 +31721,9 @@
       "documents": [
         "builtin-pool-society-and-everyday-life-10"
       ],
+      "drainage": [
+        "builtin-set-physical-geography-01-q13"
+      ],
       "drama": [
         "builtin-pool-literature-and-language-01"
       ],
@@ -28917,6 +31752,9 @@
         "builtin-pool-business-and-economics-07",
         "builtin-pool-business-and-economics-12",
         "builtin-set-general-knowledge-01-q12"
+      ],
+      "Ecuador": [
+        "builtin-set-physical-geography-01-q04"
       ],
       "editing": [
         "builtin-pool-film-and-television-12",
@@ -28954,7 +31792,10 @@
       ],
       "enclaves": [
         "builtin-pool-geography-11",
-        "builtin-set-geography-01-q11"
+        "builtin-set-geography-01-q11",
+        "builtin-set-borders-geography-01-q09",
+        "builtin-set-borders-geography-01-q11",
+        "builtin-set-borders-geography-01-q12"
       ],
       "England": [
         "builtin-pool-medieval-and-early-modern-history-02"
@@ -28968,6 +31809,9 @@
         "builtin-pool-mythology-and-religion-06",
         "builtin-pool-mythology-and-religion-10"
       ],
+      "estuaries": [
+        "builtin-set-physical-geography-01-q07"
+      ],
       "etymology": [
         "builtin-pool-vocabulary-06",
         "builtin-set-vocabulary-01-q12",
@@ -28980,7 +31824,10 @@
         "builtin-set-geography-01-q04",
         "builtin-set-geography-01-q09",
         "builtin-set-geography-01-q11",
-        "builtin-set-general-knowledge-02-q15"
+        "builtin-set-general-knowledge-02-q15",
+        "builtin-set-physical-geography-01-q03",
+        "builtin-set-physical-geography-01-q05",
+        "builtin-set-borders-geography-01-q06"
       ],
       "European Union": [
         "builtin-pool-politics-and-world-affairs-11"
@@ -28993,7 +31840,11 @@
       ],
       "exclaves": [
         "builtin-pool-geography-13",
-        "builtin-set-geography-01-q15"
+        "builtin-set-geography-01-q15",
+        "builtin-set-borders-geography-01-q06",
+        "builtin-set-borders-geography-01-q07",
+        "builtin-set-borders-geography-01-q08",
+        "builtin-set-borders-geography-01-q10"
       ],
       "exoplanets": [
         "builtin-pool-astronomy-and-space-10"
@@ -29067,7 +31918,8 @@
         "builtin-pool-modern-history-02",
         "builtin-pool-modern-history-10",
         "builtin-pool-geography-01",
-        "builtin-pool-art-and-culture-04"
+        "builtin-pool-art-and-culture-04",
+        "builtin-set-borders-geography-01-q10"
       ],
       "French cuisine": [
         "builtin-pool-food-and-drink-11",
@@ -29106,7 +31958,8 @@
       ],
       "Germany": [
         "builtin-pool-medieval-and-early-modern-history-03",
-        "builtin-pool-modern-history-01"
+        "builtin-pool-modern-history-01",
+        "builtin-set-borders-geography-01-q12"
       ],
       "Go": [
         "builtin-pool-sports-and-games-12"
@@ -29158,6 +32011,9 @@
         "builtin-pool-music-08",
         "builtin-pool-music-11"
       ],
+      "Hawaii": [
+        "builtin-set-islands-and-seas-01-q02"
+      ],
       "health": [
         "builtin-set-everyday-expert-01-q06"
       ],
@@ -29167,6 +32023,9 @@
       "Hellenistic": [
         "builtin-set-ancient-history-01-q10",
         "builtin-set-ancient-history-01-q15"
+      ],
+      "hemispheres": [
+        "builtin-set-borders-geography-01-q14"
       ],
       "Hinduism": [
         "builtin-pool-mythology-and-religion-03"
@@ -29202,6 +32061,14 @@
         "builtin-pool-medieval-and-early-modern-history-14",
         "builtin-pool-modern-history-05",
         "builtin-set-ancient-history-01-q08"
+      ],
+      "Indian Ocean": [
+        "builtin-set-islands-and-seas-01-q04",
+        "builtin-set-islands-and-seas-01-q14"
+      ],
+      "Indonesia": [
+        "builtin-set-islands-and-seas-01-q01",
+        "builtin-set-islands-and-seas-01-q13"
       ],
       "ingredients": [
         "builtin-pool-food-and-drink-03",
@@ -29250,7 +32117,16 @@
       ],
       "islands": [
         "builtin-pool-geography-08",
-        "builtin-set-geography-01-q10"
+        "builtin-set-geography-01-q10",
+        "builtin-set-islands-and-seas-01-q01",
+        "builtin-set-islands-and-seas-01-q02",
+        "builtin-set-islands-and-seas-01-q04",
+        "builtin-set-islands-and-seas-01-q05",
+        "builtin-set-islands-and-seas-01-q06",
+        "builtin-set-islands-and-seas-01-q10"
+      ],
+      "isthmuses": [
+        "builtin-set-borders-geography-01-q03"
       ],
       "Italian cinema": [
         "builtin-pool-film-and-television-10"
@@ -29259,7 +32135,8 @@
         "builtin-pool-medieval-and-early-modern-history-05",
         "builtin-pool-geography-05",
         "builtin-pool-art-and-culture-03",
-        "builtin-set-general-knowledge-02-q02"
+        "builtin-set-general-knowledge-02-q02",
+        "builtin-set-borders-geography-01-q11"
       ],
       "Japan": [
         "builtin-pool-medieval-and-early-modern-history-11",
@@ -29269,7 +32146,8 @@
         "builtin-pool-food-and-drink-15",
         "builtin-pool-mythology-and-religion-07",
         "builtin-set-geography-01-q01",
-        "builtin-set-general-knowledge-02-q07"
+        "builtin-set-general-knowledge-02-q07",
+        "builtin-set-islands-and-seas-01-q05"
       ],
       "Japanese cinema": [
         "builtin-pool-film-and-television-07",
@@ -29287,6 +32165,9 @@
       "JWST": [
         "builtin-pool-astronomy-and-space-13"
       ],
+      "Kiribati": [
+        "builtin-set-borders-geography-01-q14"
+      ],
       "Kuiper Belt": [
         "builtin-set-astronomy-01-q07"
       ],
@@ -29295,7 +32176,17 @@
       ],
       "lakes": [
         "builtin-pool-geography-10",
-        "builtin-set-geography-01-q07"
+        "builtin-set-geography-01-q07",
+        "builtin-set-physical-geography-01-q08"
+      ],
+      "landforms": [
+        "builtin-set-physical-geography-01-q13"
+      ],
+      "landlocked countries": [
+        "builtin-set-borders-geography-01-q15"
+      ],
+      "languages": [
+        "builtin-set-borders-geography-01-q02"
       ],
       "Latin America": [
         "builtin-pool-food-and-drink-09"
@@ -29410,6 +32301,9 @@
         "builtin-pool-business-and-economics-10",
         "builtin-pool-business-and-economics-11"
       ],
+      "Micronesia": [
+        "builtin-set-islands-and-seas-01-q08"
+      ],
       "Milky Way": [
         "builtin-pool-astronomy-and-space-05"
       ],
@@ -29447,7 +32341,11 @@
       "mountains": [
         "builtin-pool-geography-04",
         "builtin-pool-nature-and-earth-13",
-        "builtin-set-geography-01-q04"
+        "builtin-set-geography-01-q04",
+        "builtin-set-physical-geography-01-q02",
+        "builtin-set-physical-geography-01-q04",
+        "builtin-set-physical-geography-01-q06",
+        "builtin-set-physical-geography-01-q12"
       ],
       "Mozart": [
         "builtin-pool-music-06"
@@ -29489,6 +32387,9 @@
       "neorealism": [
         "builtin-pool-film-and-television-10"
       ],
+      "Netherlands": [
+        "builtin-set-borders-geography-01-q09"
+      ],
       "networking": [
         "builtin-pool-technology-10"
       ],
@@ -29496,12 +32397,21 @@
         "builtin-pool-astronomy-and-space-15",
         "builtin-set-stem-01-q13"
       ],
+      "New Zealand": [
+        "builtin-set-islands-and-seas-01-q03"
+      ],
       "Newton": [
         "builtin-pool-science-07"
       ],
       "Norse mythology": [
         "builtin-pool-mythology-and-religion-02",
         "builtin-pool-mythology-and-religion-09"
+      ],
+      "North America": [
+        "builtin-set-physical-geography-01-q01",
+        "builtin-set-physical-geography-01-q15",
+        "builtin-set-borders-geography-01-q01",
+        "builtin-set-borders-geography-01-q07"
       ],
       "notation": [
         "builtin-pool-music-05"
@@ -29517,11 +32427,15 @@
       "numerals": [
         "builtin-pool-ancient-history-02"
       ],
+      "Oceania": [
+        "builtin-set-islands-and-seas-01-q12"
+      ],
       "oceans": [
         "builtin-pool-geography-02",
         "builtin-pool-nature-and-earth-03",
         "builtin-pool-nature-and-earth-11",
-        "builtin-pool-nature-and-earth-15"
+        "builtin-pool-nature-and-earth-15",
+        "builtin-set-physical-geography-01-q10"
       ],
       "Old English": [
         "builtin-pool-literature-and-language-07"
@@ -29563,6 +32477,12 @@
         "builtin-pool-art-and-culture-14",
         "builtin-set-general-knowledge-02-q13",
         "builtin-set-arts-and-culture-01-q12"
+      ],
+      "Palau": [
+        "builtin-set-islands-and-seas-01-q08"
+      ],
+      "Panama": [
+        "builtin-set-borders-geography-01-q03"
       ],
       "parliamentary systems": [
         "builtin-pool-politics-and-world-affairs-13"
@@ -29639,6 +32559,9 @@
       "poetry": [
         "builtin-pool-literature-and-language-05",
         "builtin-pool-literature-and-language-10"
+      ],
+      "political geography": [
+        "builtin-set-borders-geography-01-q15"
       ],
       "politics": [
         "builtin-set-ancient-history-01-q14"
@@ -29755,7 +32678,10 @@
         "builtin-pool-geography-06",
         "builtin-set-geography-01-q03",
         "builtin-set-geography-01-q05",
-        "builtin-set-geography-01-q12"
+        "builtin-set-geography-01-q12",
+        "builtin-set-physical-geography-01-q01",
+        "builtin-set-physical-geography-01-q05",
+        "builtin-set-physical-geography-01-q08"
       ],
       "roads": [
         "builtin-pool-ancient-history-13"
@@ -29790,6 +32716,9 @@
         "builtin-pool-society-and-everyday-life-01",
         "builtin-set-everyday-expert-01-q01"
       ],
+      "salt flats": [
+        "builtin-set-physical-geography-01-q09"
+      ],
       "Sarajevo": [
         "builtin-pool-modern-history-04"
       ],
@@ -29818,7 +32747,9 @@
         "builtin-pool-food-and-drink-09"
       ],
       "seas": [
-        "builtin-pool-geography-15"
+        "builtin-pool-geography-15",
+        "builtin-set-physical-geography-01-q03",
+        "builtin-set-islands-and-seas-01-q07"
       ],
       "security": [
         "builtin-set-everyday-expert-01-q04"
@@ -29871,13 +32802,20 @@
       "South America": [
         "builtin-pool-geography-09",
         "builtin-set-geography-01-q03",
-        "builtin-set-arts-and-culture-01-q05"
+        "builtin-set-arts-and-culture-01-q05",
+        "builtin-set-physical-geography-01-q02",
+        "builtin-set-physical-geography-01-q07"
       ],
       "South Asia": [
         "builtin-set-world-civilizations-01-q12"
       ],
       "Southeast Asia": [
-        "builtin-set-geography-01-q10"
+        "builtin-set-geography-01-q10",
+        "builtin-set-islands-and-seas-01-q06",
+        "builtin-set-islands-and-seas-01-q09"
+      ],
+      "Southern Indian Ocean": [
+        "builtin-set-islands-and-seas-01-q15"
       ],
       "soy": [
         "builtin-pool-food-and-drink-05"
@@ -29886,7 +32824,8 @@
         "builtin-set-general-knowledge-01-q06"
       ],
       "Spain": [
-        "builtin-pool-medieval-and-early-modern-history-08"
+        "builtin-pool-medieval-and-early-modern-history-08",
+        "builtin-set-borders-geography-01-q10"
       ],
       "Spanish": [
         "builtin-pool-literature-and-language-03"
@@ -29928,7 +32867,11 @@
       "straits": [
         "builtin-pool-geography-07",
         "builtin-set-geography-01-q06",
-        "builtin-set-geography-01-q08"
+        "builtin-set-geography-01-q08",
+        "builtin-set-islands-and-seas-01-q03",
+        "builtin-set-islands-and-seas-01-q09",
+        "builtin-set-islands-and-seas-01-q12",
+        "builtin-set-islands-and-seas-01-q13"
       ],
       "subtraction": [
         "builtin-pool-computation-03"
@@ -29944,6 +32887,9 @@
       ],
       "Sun": [
         "builtin-pool-astronomy-and-space-04"
+      ],
+      "Switzerland": [
+        "builtin-set-borders-geography-01-q11"
       ],
       "symbiosis": [
         "builtin-pool-nature-and-earth-06",
@@ -29964,6 +32910,9 @@
       ],
       "technology": [
         "builtin-pool-ancient-history-15"
+      ],
+      "tectonics": [
+        "builtin-set-physical-geography-01-q14"
       ],
       "television": [
         "builtin-pool-film-and-television-05"
@@ -30009,6 +32958,9 @@
         "builtin-pool-society-and-everyday-life-01",
         "builtin-pool-society-and-everyday-life-09"
       ],
+      "trenches": [
+        "builtin-set-physical-geography-01-q10"
+      ],
       "tuning": [
         "builtin-pool-music-10"
       ],
@@ -30032,6 +32984,9 @@
       "Van Gogh": [
         "builtin-pool-art-and-culture-02"
       ],
+      "Venezuela": [
+        "builtin-set-physical-geography-01-q11"
+      ],
       "Venus": [
         "builtin-set-astronomy-01-q05"
       ],
@@ -30040,6 +32995,12 @@
       ],
       "war": [
         "builtin-set-ancient-history-01-q07"
+      ],
+      "waterfalls": [
+        "builtin-set-physical-geography-01-q11"
+      ],
+      "watersheds": [
+        "builtin-set-physical-geography-01-q15"
       ],
       "waves": [
         "builtin-set-science-01-q05",
@@ -30051,6 +33012,10 @@
       "web": [
         "builtin-pool-technology-05",
         "builtin-set-general-knowledge-01-q09"
+      ],
+      "West Africa": [
+        "builtin-set-borders-geography-01-q04",
+        "builtin-set-borders-geography-01-q05"
       ],
       "white dwarfs": [
         "builtin-pool-astronomy-and-space-11"
@@ -30071,6 +33036,9 @@
         "builtin-set-ancient-history-01-q09",
         "builtin-set-ancient-history-01-q13",
         "builtin-set-world-civilizations-01-q08"
+      ],
+      "Yemen": [
+        "builtin-set-islands-and-seas-01-q10"
       ],
       "Zoroastrianism": [
         "builtin-pool-mythology-and-religion-12"
@@ -30268,6 +33236,53 @@
         "builtin-set-everyday-expert-01-q13",
         "builtin-set-everyday-expert-01-q14",
         "builtin-set-everyday-expert-01-q15"
+      ],
+      "builtin-curated-release-001-group-007": [
+        "builtin-set-physical-geography-01-q01",
+        "builtin-set-physical-geography-01-q02",
+        "builtin-set-physical-geography-01-q03",
+        "builtin-set-physical-geography-01-q04",
+        "builtin-set-physical-geography-01-q05",
+        "builtin-set-physical-geography-01-q06",
+        "builtin-set-physical-geography-01-q07",
+        "builtin-set-physical-geography-01-q08",
+        "builtin-set-physical-geography-01-q09",
+        "builtin-set-physical-geography-01-q10",
+        "builtin-set-physical-geography-01-q11",
+        "builtin-set-physical-geography-01-q12",
+        "builtin-set-physical-geography-01-q13",
+        "builtin-set-physical-geography-01-q14",
+        "builtin-set-physical-geography-01-q15",
+        "builtin-set-borders-geography-01-q01",
+        "builtin-set-borders-geography-01-q02",
+        "builtin-set-borders-geography-01-q03",
+        "builtin-set-borders-geography-01-q04",
+        "builtin-set-borders-geography-01-q05",
+        "builtin-set-borders-geography-01-q06",
+        "builtin-set-borders-geography-01-q07",
+        "builtin-set-borders-geography-01-q08",
+        "builtin-set-borders-geography-01-q09",
+        "builtin-set-borders-geography-01-q10",
+        "builtin-set-borders-geography-01-q11",
+        "builtin-set-borders-geography-01-q12",
+        "builtin-set-borders-geography-01-q13",
+        "builtin-set-borders-geography-01-q14",
+        "builtin-set-borders-geography-01-q15",
+        "builtin-set-islands-and-seas-01-q01",
+        "builtin-set-islands-and-seas-01-q02",
+        "builtin-set-islands-and-seas-01-q03",
+        "builtin-set-islands-and-seas-01-q04",
+        "builtin-set-islands-and-seas-01-q05",
+        "builtin-set-islands-and-seas-01-q06",
+        "builtin-set-islands-and-seas-01-q07",
+        "builtin-set-islands-and-seas-01-q08",
+        "builtin-set-islands-and-seas-01-q09",
+        "builtin-set-islands-and-seas-01-q10",
+        "builtin-set-islands-and-seas-01-q11",
+        "builtin-set-islands-and-seas-01-q12",
+        "builtin-set-islands-and-seas-01-q13",
+        "builtin-set-islands-and-seas-01-q14",
+        "builtin-set-islands-and-seas-01-q15"
       ],
       "builtin-pool-release-001-group-001": [
         "builtin-pool-ancient-history-01",
@@ -30632,6 +33647,23 @@
         "builtin-set-astronomy-01-q14",
         "builtin-set-astronomy-01-q15"
       ],
+      "builtin-set-borders-geography-01": [
+        "builtin-set-borders-geography-01-q01",
+        "builtin-set-borders-geography-01-q02",
+        "builtin-set-borders-geography-01-q03",
+        "builtin-set-borders-geography-01-q04",
+        "builtin-set-borders-geography-01-q05",
+        "builtin-set-borders-geography-01-q06",
+        "builtin-set-borders-geography-01-q07",
+        "builtin-set-borders-geography-01-q08",
+        "builtin-set-borders-geography-01-q09",
+        "builtin-set-borders-geography-01-q10",
+        "builtin-set-borders-geography-01-q11",
+        "builtin-set-borders-geography-01-q12",
+        "builtin-set-borders-geography-01-q13",
+        "builtin-set-borders-geography-01-q14",
+        "builtin-set-borders-geography-01-q15"
+      ],
       "builtin-set-computation-01": [
         "builtin-set-computation-01-q01",
         "builtin-set-computation-01-q02",
@@ -30716,6 +33748,40 @@
         "builtin-set-geography-01-q13",
         "builtin-set-geography-01-q14",
         "builtin-set-geography-01-q15"
+      ],
+      "builtin-set-islands-and-seas-01": [
+        "builtin-set-islands-and-seas-01-q01",
+        "builtin-set-islands-and-seas-01-q02",
+        "builtin-set-islands-and-seas-01-q03",
+        "builtin-set-islands-and-seas-01-q04",
+        "builtin-set-islands-and-seas-01-q05",
+        "builtin-set-islands-and-seas-01-q06",
+        "builtin-set-islands-and-seas-01-q07",
+        "builtin-set-islands-and-seas-01-q08",
+        "builtin-set-islands-and-seas-01-q09",
+        "builtin-set-islands-and-seas-01-q10",
+        "builtin-set-islands-and-seas-01-q11",
+        "builtin-set-islands-and-seas-01-q12",
+        "builtin-set-islands-and-seas-01-q13",
+        "builtin-set-islands-and-seas-01-q14",
+        "builtin-set-islands-and-seas-01-q15"
+      ],
+      "builtin-set-physical-geography-01": [
+        "builtin-set-physical-geography-01-q01",
+        "builtin-set-physical-geography-01-q02",
+        "builtin-set-physical-geography-01-q03",
+        "builtin-set-physical-geography-01-q04",
+        "builtin-set-physical-geography-01-q05",
+        "builtin-set-physical-geography-01-q06",
+        "builtin-set-physical-geography-01-q07",
+        "builtin-set-physical-geography-01-q08",
+        "builtin-set-physical-geography-01-q09",
+        "builtin-set-physical-geography-01-q10",
+        "builtin-set-physical-geography-01-q11",
+        "builtin-set-physical-geography-01-q12",
+        "builtin-set-physical-geography-01-q13",
+        "builtin-set-physical-geography-01-q14",
+        "builtin-set-physical-geography-01-q15"
       ],
       "builtin-set-science-01": [
         "builtin-set-science-01-q01",
@@ -31392,49 +34458,49 @@
     ]
   },
   "summary": {
-    "questionCount": 480,
+    "questionCount": 525,
     "freshMixQuestionCount": 300,
-    "curatedQuestionCount": 180,
-    "curatedSetCount": 12,
-    "sourceCount": 11,
+    "curatedQuestionCount": 225,
+    "curatedSetCount": 15,
+    "sourceCount": 12,
     "categoryCount": 20,
     "byLevel": {
-      "1": 32,
-      "2": 32,
-      "3": 32,
-      "4": 32,
-      "5": 32,
-      "6": 32,
-      "7": 32,
-      "8": 32,
-      "9": 32,
-      "10": 32,
-      "11": 32,
-      "12": 32,
-      "13": 32,
-      "14": 32,
-      "15": 32
+      "1": 35,
+      "2": 35,
+      "3": 35,
+      "4": 35,
+      "5": 35,
+      "6": 35,
+      "7": 35,
+      "8": 35,
+      "9": 35,
+      "10": 35,
+      "11": 35,
+      "12": 35,
+      "13": 35,
+      "14": 35,
+      "15": 35
     },
     "byDisplayDifficulty": {
-      "Easy": 160,
-      "Moderate": 160,
-      "Difficult": 128,
-      "Millionaire": 32
+      "Easy": 175,
+      "Moderate": 175,
+      "Difficult": 140,
+      "Millionaire": 35
     },
     "byInternalTier": {
-      "Foundation": 96,
-      "Accessible": 64,
-      "Intermediate": 96,
-      "Advanced": 64,
-      "Expert": 64,
-      "Elite": 64,
-      "Millionaire": 32
+      "Foundation": 105,
+      "Accessible": 70,
+      "Intermediate": 105,
+      "Advanced": 70,
+      "Expert": 70,
+      "Elite": 70,
+      "Millionaire": 35
     },
     "byCategory": {
       "Ancient History": 33,
       "Medieval and Early Modern History": 17,
       "Modern History": 18,
-      "Geography": 35,
+      "Geography": 80,
       "Astronomy and Space": 34,
       "Science": 39,
       "Nature and Earth": 17,
@@ -31459,6 +34525,7 @@
       "builtin-curated-release-001-group-004": 30,
       "builtin-curated-release-001-group-005": 30,
       "builtin-curated-release-001-group-006": 30,
+      "builtin-curated-release-001-group-007": 45,
       "builtin-pool-release-001-group-001": 60,
       "builtin-pool-release-001-group-002": 60,
       "builtin-pool-release-001-group-003": 60,
@@ -31466,7 +34533,7 @@
       "builtin-pool-release-001-group-005": 60
     },
     "byReviewStatus": {
-      "assistant-reviewed-draft": 480
+      "assistant-reviewed-draft": 525
     },
     "missingFreshMixLevels": [],
     "missingCategoryLevelCells": []

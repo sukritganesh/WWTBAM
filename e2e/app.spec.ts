@@ -131,6 +131,44 @@ test('wrong-answer and browser-back paths preserve game integrity', async ({ pag
   await expect(page.getByRole('heading', { name: '$0', exact: true })).toBeVisible();
 });
 
+test('in-game settings keep the dialog chrome fixed while changing lower options', async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('button', { name: /Continue as Guest/i }).click();
+  await page.getByRole('button', { name: /Start New Game/i }).click();
+  await page.getByLabel('Reduced motion').check();
+  await beginFreshMix(page);
+
+  await page.getByRole('button', { name: /Pause game/i }).click();
+  await page.getByRole('button', { name: /In-Game Settings/i }).click();
+
+  const dialog = page.getByRole('dialog', { name: 'In-game settings' });
+  const contrastToggle = dialog.locator('label.toggle-row').filter({ hasText: 'Increased contrast' });
+  await contrastToggle.click();
+
+  const layout = await dialog.evaluate((modal) => {
+    const body = modal.querySelector<HTMLElement>('.modal__body')!;
+    const header = modal.querySelector<HTMLElement>('.modal__header')!;
+    const actions = modal.querySelector<HTMLElement>('.modal__actions')!;
+    const stage = modal.closest<HTMLElement>('.stage')!;
+    const modalRect = modal.getBoundingClientRect();
+    return {
+      modalScrollTop: modal.scrollTop,
+      bodyScrollTop: body.scrollTop,
+      stageScrollTop: stage.scrollTop,
+      headerTop: header.getBoundingClientRect().top,
+      actionsBottom: actions.getBoundingClientRect().bottom,
+      modalTop: modalRect.top,
+      modalBottom: modalRect.bottom
+    };
+  });
+
+  expect(layout.bodyScrollTop).toBeGreaterThan(0);
+  expect(layout.modalScrollTop).toBe(0);
+  expect(layout.stageScrollTop).toBe(0);
+  expect(layout.headerTop).toBeGreaterThanOrEqual(layout.modalTop);
+  expect(layout.actionsBottom).toBeLessThanOrEqual(layout.modalBottom);
+});
+
 test('imports and manages a structurally validated custom pack', async ({ page }) => {
   const pack = {
     schemaVersion: '1.0.0', id: 'e2e-science-pack', title: 'E2E Science Pack', description: 'A browser-tested local content pack.', version: '1.0.0', language: 'en-US', contentType: 'pool', categories: ['Science'],

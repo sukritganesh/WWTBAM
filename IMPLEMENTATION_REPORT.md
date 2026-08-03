@@ -5,7 +5,7 @@ Release: One Million 1.0.0
 
 ## Product and architecture summary
 
-One Million is a complete local-first, desktop-oriented millionaire-style trivia game built with React 18, TypeScript, and Vite. It provides a fifteen-question prize ladder, the Hint and Phone a Friend lifelines, profiles and Guest play, one globally resumable active run, curated sets, Fresh Mix selection, results and review, statistics, content management, backups, settings, procedural audio, speech synthesis, and an installable offline PWA.
+One Million is a complete local-first, desktop-oriented millionaire-style trivia game built with React 18, TypeScript, and Vite. It provides a fifteen-question prize ladder, the Hint and Phone a Friend lifelines, profiles and Guest play, one globally resumable active run, curated sets, Fresh Mix selection, results and review, statistics, content management, backups, settings, recorded music, procedural sound effects, speech synthesis, and an installable offline PWA.
 
 The implementation is divided into explicit boundaries:
 
@@ -13,14 +13,14 @@ The implementation is divided into explicit boundaries:
 - `src/data` owns the versioned IndexedDB schema and repositories. Monotonic save revisions, controller epochs, leases, and transactional terminal commits prevent stale-tab writes and duplicate history/statistics.
 - `src/content` and `scripts/content` preserve the release source, validate it, normalize compatible defects, stage imports transactionally, and generate the runtime catalog.
 - `src/screens`, `src/components`, and `src/styles` implement the fixed 16:9 stage, application flows, dialogs, settings, and accessible state presentation.
-- `src/audio` provides an original procedural Web Audio sound registry and tiered ambience, while browser speech synthesis supplies optional narration.
-- Vite PWA generation precaches the application shell, local fonts, and complete built-in catalog.
+- `src/audio` provides recorded looped music, an original procedural Web Audio effects registry, and optional browser speech synthesis.
+- Vite PWA generation precaches the application shell, local fonts, complete built-in catalog, and recorded music.
 
 Deeper implementation detail is indexed in [docs/README.md](docs/README.md).
 
 ## Major features completed
 
-- Complete start-to-finish gameplay for Fresh Mix and all twelve curated fifteen-question sets.
+- Complete start-to-finish gameplay for Fresh Mix and all fifteen curated fifteen-question sets.
 - Seeded, replay-stable question selection and answer shuffling, all prize checkpoints and payouts, final-answer confirmation, reveal states, walk-away flow, and millionaire result.
 - Hint and Phone a Friend, including persisted use, an absolute call deadline, reload recovery, early termination, and answer input suppression during a call.
 - Up to five named profiles plus Guest, dashboard resume/replacement decisions, per-profile history, statistics, question review, and curated-set progress.
@@ -29,13 +29,13 @@ Deeper implementation detail is indexed in [docs/README.md](docs/README.md).
 - Content Manager with search, enable/disable, duplicate/remove, export, file and pasted-JSON import, import preview, manual question/set authoring, sample/template downloads, and an AI-authoring prompt.
 - Transactional inert-data validation for custom packs; imported content is never evaluated as code or inserted as raw HTML.
 - Settings for music, effects, narration, speech voice/rate, mute, reduced motion, reduced glow, increased contrast, auto-advance, and fullscreen preference.
-- Original SVG visual system, locally bundled Sora and Rajdhani fonts, procedural sound effects/ambience, browser TTS with music ducking, and equivalent visible gameplay information when muted or speech is unavailable.
+- Original SVG visual system, locally bundled Sora and Rajdhani fonts, recorded looped music, procedural sound effects, browser TTS with music ducking, and equivalent visible gameplay information when muted or speech is unavailable.
 - Installable PWA with an update prompt, local-only production runtime, offline relaunch, Content Security Policy, and no dependency on remote game assets.
 - Developer documentation, content tooling, unit/component/integration tests, and production Playwright coverage.
 
 ## Material interpretations and deviations
 
-- The supplied audio directory contains curation notes and external candidate URLs, but no licensed audio files. To keep the release original, offline, and free of unverifiable asset licensing, every cue and ambient tier is synthesized with Web Audio. The decision and complete event ledger are documented in [docs/AUDIO_LEDGER.md](docs/AUDIO_LEDGER.md).
+- The supplied one-shot package contained curation notes and external candidate URLs but no audio files, so the original implementation synthesized every cue and ambient tier. A later user-approved pass replaced only the ambient music with twelve locally supplied tracks; effects remain procedural. Provenance, processing, mapping, and playback behavior are documented in [docs/AUDIO_LEDGER.md](docs/AUDIO_LEDGER.md).
 - Five supplied hints disclosed or nearly disclosed their answers. The source files remain byte-for-byte unchanged; only generated normalized records receive narrowly scoped hint repairs. Every before/after value is recorded in the validation report.
 - Guest play uses the same durable local history/statistics machinery as named profiles, keyed to the Guest owner. This makes refresh, offline, and crash behavior consistent while still avoiding a named-profile requirement.
 - The presentation scales as a fixed widescreen stage and shows a hard unsupported-size notice below 900 x 520. This is a pragmatic lower bound beneath the specified desktop target, not a mobile layout.
@@ -48,8 +48,8 @@ The immutable release copy under `content/source/release-001` was verified again
 
 | Measure | Accepted result |
 | --- | ---: |
-| Source JSON files | 11 (5 pool, 6 curated) |
-| Accepted questions | 480 unique |
+| Source JSON files | 12 (5 pool, 7 curated) |
+| Accepted questions | 525 unique |
 | Rejected questions | 0 |
 | Pool questions | 300 |
 | Curated questions | 180 |
@@ -60,9 +60,9 @@ The immutable release copy under `content/source/release-001` was verified again
 | Normalization repairs | 5 records |
 | Hash mismatches | 0 |
 
-Coverage is complete: every one of the 20 categories has exactly 15 pool questions, one at each level 1 through 15; each level has 20 Fresh Mix questions and 32 questions across the whole catalog; every curated set has exactly 15 ordered questions; and there are six single-category plus six mixed-category sets. There are no missing Fresh Mix levels or category/level cells.
+Coverage is complete: every one of the 20 categories has exactly 15 pool questions, one at each level 1 through 15; each level has 20 Fresh Mix questions and 35 questions across the whole catalog; every curated set has exactly 15 ordered questions; and there are nine single-category plus six mixed-category sets. There are no missing Fresh Mix levels or category/level cells.
 
-All 480 records retain the supplied `assistant-reviewed-draft` review status. The one non-blocking warning explicitly recommends human factual review and play-test calibration. The machine-readable evidence is in `content/normalized/release-001/validation-report.json`.
+All 525 records retain the `assistant-reviewed-draft` review status. The one non-blocking warning explicitly recommends human factual review and play-test calibration. The machine-readable evidence is in `content/normalized/release-001/validation-report.json`.
 
 ## Commands actually run
 
@@ -86,23 +86,23 @@ npm audit --omit=dev
 
 ## Verification results
 
-The final `npm run validate` completed successfully in 59.6 seconds on 2026-07-11. It ran TypeScript checking, source/content validation, the Vitest suite, a fresh content catalog build, a production Vite/PWA build, and the production Playwright suite.
+The post-geography `npm run validate` completed successfully in 66.1 seconds on 2026-07-26. It ran TypeScript checking, source/content validation, the Vitest suite, a fresh content catalog build, a production Vite/PWA build, and the production Playwright suite.
 
 - TypeScript: passed with no emitted output; unused-local and unused-parameter checks also passed and are enabled in `tsconfig.json`.
-- Content: valid; all 11 SHA-256 hashes matched; 480 accepted questions, 12 sets, five documented repairs, zero errors, one editorial warning.
-- Unit/component/integration: 9 files passed, 72 tests passed, 0 failed.
+- Content: valid; all 12 SHA-256 hashes matched; 525 accepted questions, 15 sets, five documented repairs, zero errors, one editorial warning.
+- Unit/component/integration: 12 files passed, 87 tests passed, 0 failed.
 - Coverage run: 80.24% statements, 67.06% branches, 90.65% functions, and 80.24% lines across the configured application domains. No numeric threshold is configured.
-- Production build: passed; 98 modules transformed. The generated PWA precache contains 14 entries totaling 1,136.00 KiB.
-- Production browser suite: 8 Chromium scenarios passed in 35.4 seconds. These cover exact refresh/resume state, both lifelines, a deterministic full millionaire run, offline relaunch/no external runtime requests, wrong-answer and Browser Back behavior, custom-pack import/management, multi-tab takeover, walk-away idempotency, and global-save replacement across profiles.
+- Production build: passed; 100 modules transformed. The generated PWA precache contains 26 entries totaling 39,033.51 KiB, including all 12 recorded music tracks.
+- Production browser suite: 8 Chromium scenarios passed in 38.3 seconds. These cover exact refresh/resume state, both lifelines, a deterministic full millionaire run, offline relaunch/no external runtime requests, wrong-answer and Browser Back behavior, custom-pack import/management, multi-tab takeover, walk-away idempotency, and global-save replacement across profiles.
 - Runtime dependency audit: `npm audit --omit=dev` reported 0 vulnerabilities.
 
-The only build diagnostic is Vite's advisory that the main JavaScript chunk is larger than 500 kB: 976.67 kB minified and 186.92 kB gzip. It does not fail the build.
+The only build diagnostic is Vite's advisory that the main JavaScript chunk is larger than 500 kB: 1,041.31 kB minified and 195.23 kB gzip. It does not fail the build.
 
 ## Offline and PWA verification
 
 Offline behavior was tested against the generated production build, not the development server. Playwright first loaded and exercised the installed build, then relaunched it in an offline browser context and confirmed that the title/application shell still rendered. The same scenario monitored gameplay traffic and failed on any external HTTP request; none occurred.
 
-The final build generated `manifest.webmanifest`, `sw.js`, Workbox runtime files, and a 14-entry precache containing the application, bundled fonts, and generated catalog. An update-ready prompt is wired through the PWA registration lifecycle. Browser storage remains entirely local in IndexedDB.
+The final build generated `manifest.webmanifest`, `sw.js`, Workbox runtime files, and a 26-entry precache containing the application, bundled fonts, generated catalog, and all recorded music. An update-ready prompt is wired through the PWA registration lifecycle. Browser storage remains entirely local in IndexedDB.
 
 ## Accessibility verification
 
@@ -138,12 +138,14 @@ The effects channel works, but the background-music implementation does not prod
 
 The result is technically an active background-audio signal, but perceptually it is a low electronic drone or buzz and may sound especially poor on some speakers. This is a product-quality failure in the procedural-audio interpretation, even though the audio graph is functioning as written and the separately enveloped sound effects remain audible.
 
+**Status: fixed.** Twelve user-supplied recordings now provide the intro, three gameplay levels, pause, and outro scenes. One track per run scene is selected from the random run ID, all tracks loop, and gameplay/pause positions are retained across repeated pauses. The oscillator implementation remains only for short effects.
+
 ## Known limitations and human review
 
 - The built-in questions are structurally validated assistant-reviewed drafts. A human editor should factual-check all questions, hints, explanations, dates, names, and ambiguity before public editorial release.
 - Difficulty levels and Phone a Friend pacing/confidence should be calibrated through real-player sessions; structural coverage cannot establish empirical difficulty.
 - Browser speech voice availability and pronunciation differ by operating system. Only local English voices are preferred, and visible text remains authoritative.
-- Procedural audio was reviewed functionally, but final mix levels should be evaluated on varied speakers and headphones.
+- Recorded music and procedural effects should receive a final mix review on varied speakers and headphones. The repository owner must also confirm redistribution rights for the user-supplied music before public release.
 - The release is desktop-first. Additional viewport/zoom, reduced-motion, high-contrast, keyboard-only, and screen-reader passes remain worthwhile before a broad public launch.
 - Automated browser verification currently targets Chromium only. Firefox, WebKit, installed-PWA UX on each desktop OS, quota exhaustion, and destructive storage failure deserve separate compatibility testing.
 - The single initial JavaScript chunk is functional but above Vite's advisory size threshold; route-level code splitting is a future performance improvement.

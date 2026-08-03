@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
   "releaseId": "builtin-question-content-release-001",
-  "releaseVersion": "1.0.0",
-  "validatedAt": "2026-07-11",
+  "releaseVersion": "1.1.0",
+  "validatedAt": "2026-07-26",
   "valid": true,
   "sourceIntegrity": {
     "algorithm": "SHA-256",
@@ -242,64 +242,80 @@
           "Vocabulary",
           "Politics and World Affairs"
         ]
+      },
+      {
+        "manifestPath": "curated_sets_json/curated-007-geography-collection.json",
+        "repositoryPath": "curated-sets/curated-007-geography-collection.json",
+        "packId": "builtin-curated-release-001-group-007",
+        "kind": "set",
+        "byteLength": 37306,
+        "utf8Bom": false,
+        "sourceSha256": "43a53aa9e2adef9f7b8ae1eaef7cdb7420c623e635a063a895533f33139f1a1c",
+        "expectedSha256": "43a53aa9e2adef9f7b8ae1eaef7cdb7420c623e635a063a895533f33139f1a1c",
+        "hashMatches": true,
+        "questionCount": 45,
+        "setCount": 3,
+        "categories": [
+          "Geography"
+        ]
       }
     ]
   },
   "totals": {
-    "sourceFiles": 11,
+    "sourceFiles": 12,
     "poolFiles": 5,
-    "curatedSetFiles": 6,
-    "questions": 480,
+    "curatedSetFiles": 7,
+    "questions": 525,
     "poolQuestions": 300,
-    "curatedQuestions": 180,
-    "curatedSets": 12,
+    "curatedQuestions": 225,
+    "curatedSets": 15,
     "categories": 20,
     "normalizationRepairs": 5
   },
   "coverage": {
-    "questionCount": 480,
+    "questionCount": 525,
     "freshMixQuestionCount": 300,
-    "curatedQuestionCount": 180,
-    "curatedSetCount": 12,
-    "sourceCount": 11,
+    "curatedQuestionCount": 225,
+    "curatedSetCount": 15,
+    "sourceCount": 12,
     "categoryCount": 20,
     "byLevel": {
-      "1": 32,
-      "2": 32,
-      "3": 32,
-      "4": 32,
-      "5": 32,
-      "6": 32,
-      "7": 32,
-      "8": 32,
-      "9": 32,
-      "10": 32,
-      "11": 32,
-      "12": 32,
-      "13": 32,
-      "14": 32,
-      "15": 32
+      "1": 35,
+      "2": 35,
+      "3": 35,
+      "4": 35,
+      "5": 35,
+      "6": 35,
+      "7": 35,
+      "8": 35,
+      "9": 35,
+      "10": 35,
+      "11": 35,
+      "12": 35,
+      "13": 35,
+      "14": 35,
+      "15": 35
     },
     "byDisplayDifficulty": {
-      "Easy": 160,
-      "Moderate": 160,
-      "Difficult": 128,
-      "Millionaire": 32
+      "Easy": 175,
+      "Moderate": 175,
+      "Difficult": 140,
+      "Millionaire": 35
     },
     "byInternalTier": {
-      "Foundation": 96,
-      "Accessible": 64,
-      "Intermediate": 96,
-      "Advanced": 64,
-      "Expert": 64,
-      "Elite": 64,
-      "Millionaire": 32
+      "Foundation": 105,
+      "Accessible": 70,
+      "Intermediate": 105,
+      "Advanced": 70,
+      "Expert": 70,
+      "Elite": 70,
+      "Millionaire": 35
     },
     "byCategory": {
       "Ancient History": 33,
       "Medieval and Early Modern History": 17,
       "Modern History": 18,
-      "Geography": 35,
+      "Geography": 80,
       "Astronomy and Space": 34,
       "Science": 39,
       "Nature and Earth": 17,
@@ -324,6 +340,7 @@
       "builtin-curated-release-001-group-004": 30,
       "builtin-curated-release-001-group-005": 30,
       "builtin-curated-release-001-group-006": 30,
+      "builtin-curated-release-001-group-007": 45,
       "builtin-pool-release-001-group-001": 60,
       "builtin-pool-release-001-group-002": 60,
       "builtin-pool-release-001-group-003": 60,
@@ -331,7 +348,7 @@
       "builtin-pool-release-001-group-005": 60
     },
     "byReviewStatus": {
-      "assistant-reviewed-draft": 480
+      "assistant-reviewed-draft": 525
     },
     "missingFreshMixLevels": [],
     "missingCategoryLevelCells": []
@@ -380,7 +397,7 @@
       "Ancient History": 18,
       "Medieval and Early Modern History": 2,
       "Modern History": 3,
-      "Geography": 20,
+      "Geography": 65,
       "Astronomy and Space": 19,
       "Science": 24,
       "Nature and Earth": 2,
@@ -399,23 +416,23 @@
       "Business and Economics": 8
     },
     "allQuestionsPerLevel": {
-      "1": 32,
-      "2": 32,
-      "3": 32,
-      "4": 32,
-      "5": 32,
-      "6": 32,
-      "7": 32,
-      "8": 32,
-      "9": 32,
-      "10": 32,
-      "11": 32,
-      "12": 32,
-      "13": 32,
-      "14": 32,
-      "15": 32
+      "1": 35,
+      "2": 35,
+      "3": 35,
+      "4": 35,
+      "5": 35,
+      "6": 35,
+      "7": 35,
+      "8": 35,
+      "9": 35,
+      "10": 35,
+      "11": 35,
+      "12": 35,
+      "13": 35,
+      "14": 35,
+      "15": 35
     },
-    "singleCategorySets": 6,
+    "singleCategorySets": 9,
     "mixedCategorySets": 6
   },
   "schemaSignatures": {
@@ -434,7 +451,7 @@
           "sets",
           "metadata"
         ],
-        "count": 11
+        "count": 12
       }
     ],
     "question": [
@@ -451,7 +468,7 @@
           "explanation",
           "usage"
         ],
-        "count": 480
+        "count": 525
       }
     ],
     "choice": [
@@ -460,7 +477,7 @@
           "id",
           "text"
         ],
-        "count": 1920
+        "count": 2100
       }
     ],
     "usage": [
@@ -469,7 +486,7 @@
           "freshMix",
           "setIds"
         ],
-        "count": 480
+        "count": 525
       }
     ],
     "packMetadata": [
@@ -493,7 +510,7 @@
           "humanReviewRecommended",
           "timeSensitiveQuestionCount"
         ],
-        "count": 6
+        "count": 7
       }
     ],
     "curatedSet": [
@@ -506,7 +523,7 @@
           "tags",
           "questionIds"
         ],
-        "count": 12
+        "count": 15
       }
     ]
   },

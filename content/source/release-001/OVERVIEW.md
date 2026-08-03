@@ -4,7 +4,7 @@
 
 Overview
 
-This release contains 480 unique multiple-choice questions in modular JSON files. Every question includes a stable ID, exact level from 1 through 15, primary category, optional tags, four stable answer choices, one correct-choice reference, a hint, an explanation, usage membership, and review metadata.
+Release 001 v1.1.0 contains 525 unique multiple-choice questions in modular JSON files. Every question includes a stable ID, exact level from 1 through 15, primary category, optional tags, four stable answer choices, one correct-choice reference, a hint, an explanation, usage membership, and review metadata.
 
 Fresh Mix pool
 
@@ -12,15 +12,18 @@ The pool\_json folder contains 5 medium-sized source files and 300 questions. Ea
 
 Curated sets
 
-The curated\_sets\_json folder contains 6 modular JSON files holding 12 separate 15-question sets and 180 additional questions. Each file contains two related sets. Pool and curated-set questions are separate, so Fresh Mix does not spoil these sets.
+The curated\_sets\_json folder contains 7 modular JSON files holding 15 separate 15-question sets and 225 additional questions. The original six files contain two related sets each; the v1.1.0 geography supplement contains three. Pool and curated-set questions are separate, so Fresh Mix does not spoil these sets.
 
-Six single-category sets:  
-\- Astronomy and Space: First Light  
-\- Computation Challenge: Mental Gymnastics  
-\- Vocabulary: Words Worth Knowing  
-\- Ancient History: Empires and Ideas  
-\- Geography: Around the World  
+Nine single-category sets:
+\- Astronomy and Space: First Light
+\- Computation Challenge: Mental Gymnastics
+\- Vocabulary: Words Worth Knowing
+\- Ancient History: Empires and Ideas
+\- Geography: Around the World
 \- Science: Principles and Discoveries
+\- Physical Geography: Forces and Features
+\- Borders and Human Geography
+\- Islands, Seas, and Archipelagos
 
 Six mixed-category sets:  
 \- General Knowledge I: The Opening Round  
@@ -37,8 +40,8 @@ The manifests folder contains manifest.json and coverage-index.json. The manifes
 Validation performed
 
 Automated structural checks confirmed:  
-\- 480 unique question IDs  
-\- 480 unique prompts  
+\- 525 unique question IDs
+\- 525 unique prompts
 \- Exactly four distinct answer choices per question  
 \- Exactly one valid correct answer reference per question  
 \- Complete level 1–15 coverage for every pool category and every curated set  
@@ -64,6 +67,5 @@ These repairs remove accidental answer leakage from hints. They do not change pr
 Intended integration  
 Codex should ingest these files through the manifest-driven validation and normalization pipeline described in the technical specification. Gameplay should query the normalized local catalog and database indexes rather than opening raw JSON files at question-selection time. More pool files and curated sets can be added later by preserving stable IDs and adding valid manifest entries.
 
-Final Drive verification  
-The completed Drive release was re-read from storage and validated after upload. The final manifest hashes match the exact stored bytes of all five pool files and all six curated-set files. Temporary probes and duplicate uploads were removed.
-
+Source verification
+The original Drive release was re-read from storage and validated after upload. Release 001 v1.1.0 retains those 11 original payloads byte-for-byte and adds one locally authored geography pack. The current manifest hashes match the exact repository bytes of all five pool files and all seven curated-set files.

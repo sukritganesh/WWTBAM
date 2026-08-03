@@ -2,15 +2,15 @@
   "schemaVersion": "1.0.0",
   "id": "builtin-question-content-release-001",
   "title": "Initial Question Content Release 001",
-  "version": "1.0.0",
-  "description": "Manifest for 300 Fresh Mix questions and 12 curated sets containing 180 additional questions.",
+  "version": "1.1.0",
+  "description": "Manifest for 300 Fresh Mix questions and 15 curated sets containing 225 additional questions.",
   "totals": {
     "poolFiles": 5,
-    "curatedSetFiles": 6,
+    "curatedSetFiles": 7,
     "poolQuestions": 300,
-    "curatedSetQuestions": 180,
-    "totalUniqueQuestions": 480,
-    "curatedSets": 12,
+    "curatedSetQuestions": 225,
+    "totalUniqueQuestions": 525,
+    "curatedSets": 15,
     "primaryCategories": 20
   },
   "files": [
@@ -193,11 +193,22 @@
       ],
       "sha256": "969974868a3538df4c0e83e193a63b652e384fa7098a72658dbaff9b76bf0078",
       "defaultEnabled": true
+    },
+    {
+      "kind": "set",
+      "path": "curated_sets_json/curated-007-geography-collection.json",
+      "packId": "builtin-curated-release-001-group-007",
+      "questionCount": 45,
+      "categories": [
+        "Geography"
+      ],
+      "sha256": "43a53aa9e2adef9f7b8ae1eaef7cdb7420c623e635a063a895533f33139f1a1c",
+      "defaultEnabled": true
     }
   ],
   "integrity": {
     "hashAlgorithm": "SHA-256",
-    "hashScope": "exact bytes stored in Google Drive",
-    "validatedAt": "2026-07-11"
+    "hashScope": "exact bytes stored in the repository source release",
+    "validatedAt": "2026-07-26"
   }
 }

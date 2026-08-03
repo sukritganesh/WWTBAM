@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { audioManager } from '../audio/AudioManager';
 import { speechManager } from '../audio/SpeechManager';
-import type { AudioPreferences, MusicTier } from '../audio/types';
+import type { AudioPreferences } from '../audio/types';
 import { useSpeechVoices } from '../audio/useSpeechVoices';
 import { BrandMark } from '../components/BrandMark';
 import { Modal } from '../components/Modal';
@@ -73,6 +73,7 @@ import {
   terminalCommitFromRun
 } from './adapters';
 import { rawPackFromStored } from './packTransfer';
+import { musicSceneForApp } from './music';
 import { audioPreferencesFromRecord, settingsPatchFromAudio } from './settings';
 import type { ActiveIdentity, NewGameConfig, ScreenId, ToastMessage } from './types';
 
@@ -239,14 +240,26 @@ export function App() {
 
   useEffect(() => { audioManager.configure(audioSettings); }, [audioSettings]);
   useEffect(() => {
+    const unlock = () => {
+      void audioManager.unlock();
+      window.removeEventListener('pointerdown', unlock);
+      window.removeEventListener('keydown', unlock);
+    };
+    window.addEventListener('pointerdown', unlock, { passive: true });
+    window.addEventListener('keydown', unlock);
+    return () => {
+      window.removeEventListener('pointerdown', unlock);
+      window.removeEventListener('keydown', unlock);
+    };
+  }, []);
+  useEffect(() => {
     document.documentElement.dataset.reducedMotion = String(audioSettings.reducedMotion);
     document.documentElement.dataset.reducedGlow = String(audioSettings.reducedGlow);
     document.documentElement.dataset.highContrast = String(audioSettings.highContrast);
   }, [audioSettings.highContrast, audioSettings.reducedGlow, audioSettings.reducedMotion]);
 
   useEffect(() => {
-    const tier: MusicTier = screen !== 'game' || !game ? 'menu' : currentQuestion(game).level === 15 ? 'final' : currentQuestion(game).level >= 11 ? 'late' : currentQuestion(game).level >= 6 ? 'middle' : 'early';
-    audioManager.setMusicTier(tier);
+    audioManager.setMusicScene(musicSceneForApp(screen, game), game?.runId);
   }, [game, screen]);
 
   useEffect(() => {
@@ -626,7 +639,7 @@ export function App() {
     notify('success', `${packId} removed. Saved and historical snapshots remain intact.`);
   }, [notify, refreshImported]);
 
-  if (booting) return <StageFrame><div className="boot-screen"><BrandMark /><div className="boot-line"><i /></div><p>Validating local systems and 480-question catalog…</p></div></StageFrame>;
+  if (booting) return <StageFrame><div className="boot-screen"><BrandMark /><div className="boot-line"><i /></div><p>Validating local systems and 525-question catalog…</p></div></StageFrame>;
   if (fatalError) return <StageFrame><div className="fatal-screen"><span className="kicker">Recovery mode</span><h1>One Million could not start.</h1><p>{fatalError}</p><div className="button-row"><button className="primary-button" type="button" onClick={() => location.reload()}>Retry startup</button></div></div></StageFrame>;
 
   const modeTitle = config.mode === 'fresh-mix' ? 'Fresh Mix' : config.mode === 'surprise' ? 'Surprise Me' : setDisplay.find((set) => set.id === config.selectedSetId)?.title ?? 'Curated Set';

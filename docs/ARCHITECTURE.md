@@ -13,7 +13,7 @@ The main runtime boundaries are:
 | `src/content` | Content types, validation, normalization, catalog indexes, transactional import preparation |
 | `src/data` | Typed IndexedDB schema, migrations, repositories, backups, profile transfer, concurrency guards |
 | `src/screens` and `src/components` | Controlled presentation and accessible interaction surfaces |
-| `src/audio` | Procedural Web Audio effects/music and browser speech synthesis |
+| `src/audio` | Recorded looped music, procedural Web Audio effects, and browser speech synthesis |
 | `src/pwa` | Service-worker registration, offline/update status and user-requested activation |
 
 `src/main.tsx` mounts `App` inside React Strict Mode. `App` renders a fixed 16:9 stage and switches screens with the typed `ScreenId` model; the project does not use a routing framework. Browser history is intercepted during gameplay so Back opens Pause rather than exposing earlier game state.
@@ -33,7 +33,7 @@ On startup, `App.tsx`:
 - Serialized autosaves and controller-lease heartbeats.
 - Seen, Hint, Phone, and answered-history writes.
 - Answer-reveal timing and optional automatic advancement.
-- Audio cues, music tier changes, and speech interruption.
+- Audio cues, music scene changes, and speech interruption.
 - Terminal history/statistics commits.
 - Content import/export, profile transfer, and backup/restore.
 - PWA status, update activation, fullscreen, navigation, dialogs, and toasts.
@@ -143,7 +143,7 @@ Full restore replaces all stores and advances the active-save revision. Profile 
 
 ## Audio and text to speech
 
-Audio has independent music, effects, and voice settings plus master mute. `AudioManager` builds a Web Audio graph lazily after browser permission/user interaction. Music beds and effects are original procedural oscillators defined by logical events in `soundRegistry.ts`; the runtime does not fetch audio files.
+Audio has independent music, effects, and voice settings plus master mute. `AudioManager` builds the effects Web Audio graph lazily after browser permission/user interaction and controls recorded music through looped `HTMLAudioElement` instances. `musicCatalog.ts` derives one stable Questions 1–5, Questions 6–10, Questions 11–15, Pause, and Outro choice from the random run ID. Keeping the chosen media elements alive preserves gameplay and pause positions when switching between those scenes. Short effects remain original procedural oscillator recipes in `soundRegistry.ts`.
 
 `SpeechManager` uses the browser `speechSynthesis` API. It discovers English voices asynchronously, prefers the configured voice, then a local voice, then the first compatible voice. Starting speech cancels previous speech and ducks music; ending, cancellation, or an error restores music. Speech failure never blocks gameplay because all content remains visible.
 
@@ -151,7 +151,7 @@ Audio has independent music, effects, and voice settings plus master mute. `Audi
 
 `vite-plugin-pwa` generates the manifest and Workbox service worker during production builds. The service worker precaches built JavaScript, CSS, HTML, SVG, local fonts, and JSON and uses `index.html` as the navigation fallback. No service worker is enabled in the Vite development server.
 
-Registration uses prompt mode. `usePwa` reports online status, offline readiness, and an available update. Applying an update is an explicit user action. Built-in content, fonts, icons, and procedural audio are local, so gameplay makes no runtime network request.
+Registration uses prompt mode. `usePwa` reports online status, offline readiness, and an available update. Applying an update is an explicit user action. Built-in content, fonts, icons, recorded MP3 music, and procedural effects are local, so gameplay makes no runtime network request. The twelve music files are included in the service-worker precache.
 
 ## Presentation and accessibility
 

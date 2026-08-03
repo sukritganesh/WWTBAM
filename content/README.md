@@ -1,6 +1,6 @@
 # Question Content
 
-This directory contains the immutable built-in source release and its generated runtime forms. Gameplay reads the generated catalog; it does not open source packs or scan content directories while creating a run.
+This directory contains the hash-protected built-in source release and its generated runtime forms. Gameplay reads the generated catalog; it does not open source packs or scan content directories while creating a run.
 
 For validator behavior, schemas, custom imports, and extension instructions, see [the content pipeline guide](../docs/CONTENT_PIPELINE.md).
 
@@ -17,7 +17,7 @@ content/
       pool/
         pool-001-*.json ... pool-005-*.json
       curated-sets/
-        curated-001-*.json ... curated-006-*.json
+        curated-001-*.json ... curated-007-*.json
   normalized/
     release-001/
       release.json
@@ -50,24 +50,25 @@ Release 001 contains:
 - 300 Fresh Mix questions.
 - 20 controlled primary categories.
 - Exactly 15 pool questions per category: one at every level from 1 through 15.
-- 6 curated-set files containing 30 questions and two sets each.
-- 12 curated sets containing 15 questions each.
-- 180 curated questions that do not overlap the Fresh Mix pool.
-- 480 unique questions and 1,920 answer choices overall.
-- 32 questions at every exact level: 20 pool questions plus one from each of the 12 sets.
-- 6 single-category sets and 6 mixed-category sets.
+- 7 curated-set files: six original 30-question/two-set packs and one 45-question/three-set geography supplement.
+- 15 curated sets containing 15 questions each.
+- 225 curated questions that do not overlap the Fresh Mix pool.
+- 525 unique questions and 2,100 answer choices overall.
+- 35 questions at every exact level: 20 pool questions plus one from each of the 15 sets.
+- 9 single-category sets and 6 mixed-category sets.
 
-All 11 source payload hashes match `manifests/manifest.json`. The coverage figures also match `manifests/coverage-index.json`.
+All 12 source payload hashes match `manifests/manifest.json`. The coverage figures also match `manifests/coverage-index.json`.
 
-## Immutable-source policy
+## Source-integrity policy
 
-Files under `content/source/release-001` are preserved source and interchange artifacts. Do not reformat, normalize line endings, add or remove a UTF-8 BOM, or apply editorial repairs in place. SHA-256 covers exact bytes, including BOMs and final newlines.
+Files under `content/source/release-001` are source and interchange artifacts protected by manifest hashes. Do not reformat, normalize line endings, add or remove a UTF-8 BOM, or apply editorial repairs in place without an intentional release-version and manifest update. SHA-256 covers exact bytes, including BOMs and final newlines.
 
 In particular:
 
 - The five pool files are minified UTF-8 without BOM and end with LF.
-- The six curated-set files are minified UTF-8 with BOM and no final newline.
-- `coverage-index.json` is also BOM-prefixed.
+- The six original curated-set files are minified UTF-8 with BOM and no final newline.
+- The v1.1.0 geography supplement is formatted UTF-8 without BOM.
+- `coverage-index.json` is minified UTF-8 without BOM in v1.1.0.
 - `manifest.json` is formatted UTF-8 without BOM.
 
 The parser strips one leading BOM for JSON parsing only. Hash verification always uses the untouched byte buffer first.
@@ -110,5 +111,5 @@ npx vitest run src/content/content.test.ts
 Successful validation currently reports:
 
 ```text
-480 questions (300 pool + 180 curated), 12 sets, 11 source files, 5 repairs
+525 questions (300 pool + 225 curated), 15 sets, 12 source files, 5 repairs
 ```

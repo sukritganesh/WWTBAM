@@ -1,30 +1,60 @@
+import { musicSourceForScene, selectRunMusic, type RunMusicPlaylist } from './musicCatalog';
 import { SOUND_REGISTRY } from './soundRegistry';
-import { DEFAULT_AUDIO_PREFERENCES, type AudioPreferences, type MusicTier, type SoundEvent } from './types';
+import {
+  DEFAULT_AUDIO_PREFERENCES,
+  type AudioPreferences,
+  type MusicScene,
+  type SoundEvent,
+} from './types';
 
-const TIER_FREQUENCIES: Record<Exclude<MusicTier, 'silent'>, readonly [number, number]> = {
-  menu: [55, 82.41],
-  early: [65.41, 98],
-  middle: [58.27, 87.31],
-  late: [49, 73.42],
-  final: [41.2, 61.74]
+export interface MusicElement {
+  loop: boolean;
+  preload: string;
+  volume: number;
+  currentTime: number;
+  readonly paused: boolean;
+  play(): Promise<void>;
+  pause(): void;
+}
+
+export type MusicElementFactory = (source: string) => MusicElement;
+
+const createBrowserMusicElement: MusicElementFactory = (source) => {
+  const element = new Audio(source);
+  element.loop = true;
+  element.preload = 'auto';
+  return element;
 };
 
 export class AudioManager {
   private context: AudioContext | null = null;
   private master: GainNode | null = null;
-  private music: GainNode | null = null;
   private effects: GainNode | null = null;
-  private musicOscillators: OscillatorNode[] = [];
   private preferences: AudioPreferences = DEFAULT_AUDIO_PREFERENCES;
-  private tier: MusicTier = 'silent';
   private ducked = false;
   private lastPlayed = new Map<SoundEvent, number>();
 
+  private musicScene: MusicScene = 'silent';
+  private runPlaylist: RunMusicPlaylist | null = null;
+  private musicElements = new Map<string, MusicElement>();
+  private activeMusic: MusicElement | null = null;
+  private activeMusicSource: string | null = null;
+
+  constructor(
+    private readonly createMusicElement: MusicElementFactory = createBrowserMusicElement,
+  ) {}
+
   async unlock(): Promise<boolean> {
-    if (typeof window === 'undefined' || !('AudioContext' in window || 'webkitAudioContext' in window)) return false;
+    // Calling play synchronously from the user's gesture is important for
+    // browsers that reject delayed autoplay attempts.
+    this.startActiveMusic();
+    if (typeof window === 'undefined' || !('AudioContext' in window || 'webkitAudioContext' in window)) {
+      return false;
+    }
     try {
       if (!this.context) this.createGraph();
       if (this.context?.state === 'suspended') await this.context.resume();
+      this.startActiveMusic();
       return this.context?.state === 'running';
     } catch {
       return false;
@@ -34,20 +64,31 @@ export class AudioManager {
   configure(preferences: AudioPreferences): void {
     this.preferences = preferences;
     this.applyLevels();
-    if (!preferences.musicEnabled || preferences.masterMuted) this.stopMusic();
-    else if (this.tier !== 'silent' && this.musicOscillators.length === 0) this.startMusic(this.tier);
+    if (!this.musicCanPlay()) this.activeMusic?.pause();
+    else this.startActiveMusic();
   }
 
-  setMusicTier(tier: MusicTier): void {
-    if (tier === this.tier && (tier === 'silent' || this.musicOscillators.length > 0)) return;
-    this.tier = tier;
-    this.stopMusic();
-    if (tier !== 'silent' && this.preferences.musicEnabled && !this.preferences.masterMuted) this.startMusic(tier);
+  setMusicScene(scene: MusicScene, runId?: string): void {
+    if (runId) this.ensureRunPlaylist(runId);
+    const source = musicSourceForScene(scene, this.runPlaylist);
+    this.musicScene = scene;
+
+    if (source === this.activeMusicSource) {
+      this.applyMusicLevel();
+      this.startActiveMusic();
+      return;
+    }
+
+    this.activeMusic?.pause();
+    this.activeMusicSource = source;
+    this.activeMusic = source ? this.getMusicElement(source) : null;
+    this.applyMusicLevel();
+    this.startActiveMusic();
   }
 
   setDucked(ducked: boolean): void {
     this.ducked = ducked;
-    this.applyLevels();
+    this.applyMusicLevel();
   }
 
   play(event: SoundEvent): void {
@@ -78,55 +119,77 @@ export class AudioManager {
   }
 
   suspend(): void {
+    this.activeMusic?.pause();
     void this.context?.suspend();
+  }
+
+  private ensureRunPlaylist(runId: string): void {
+    if (this.runPlaylist?.runId === runId) return;
+
+    for (const [source, element] of this.musicElements) {
+      if (source.includes('/intro/')) continue;
+      element.pause();
+      this.musicElements.delete(source);
+    }
+    if (this.activeMusicSource && !this.activeMusicSource.includes('/intro/')) {
+      this.activeMusic = null;
+      this.activeMusicSource = null;
+    }
+    this.runPlaylist = selectRunMusic(runId);
+  }
+
+  private getMusicElement(source: string): MusicElement {
+    const existing = this.musicElements.get(source);
+    if (existing) return existing;
+    const element = this.createMusicElement(source);
+    element.loop = true;
+    element.preload = 'auto';
+    this.musicElements.set(source, element);
+    return element;
+  }
+
+  private musicCanPlay(): boolean {
+    return Boolean(
+      this.activeMusic &&
+      this.musicScene !== 'silent' &&
+      !this.preferences.masterMuted &&
+      this.preferences.musicEnabled,
+    );
+  }
+
+  private startActiveMusic(): void {
+    if (!this.musicCanPlay() || !this.activeMusic?.paused) return;
+    try {
+      void this.activeMusic.play().catch(() => {
+        // Autoplay rejection is expected before the first user interaction.
+      });
+    } catch {
+      // Some test and legacy media implementations throw synchronously.
+    }
+  }
+
+  private applyMusicLevel(): void {
+    if (!this.activeMusic) return;
+    const level = this.preferences.musicVolume * (this.ducked ? 0.22 : 1);
+    this.activeMusic.volume = Math.max(0, Math.min(1, level));
   }
 
   private createGraph(): void {
     const Context = window.AudioContext ?? window.webkitAudioContext;
     this.context = new Context();
     this.master = this.context.createGain();
-    this.music = this.context.createGain();
     this.effects = this.context.createGain();
-    this.music.connect(this.master);
     this.effects.connect(this.master);
     this.master.connect(this.context.destination);
     this.applyLevels();
   }
 
   private applyLevels(): void {
-    if (!this.context || !this.master || !this.music || !this.effects) return;
+    this.applyMusicLevel();
+    if (!this.context || !this.master || !this.effects) return;
     const at = this.context.currentTime;
     this.master.gain.setTargetAtTime(this.preferences.masterMuted ? 0 : 1, at, 0.025);
     this.effects.gain.setTargetAtTime(this.preferences.effectsEnabled ? this.preferences.effectsVolume : 0, at, 0.02);
-    const musicLevel = this.preferences.musicEnabled ? this.preferences.musicVolume * (this.ducked ? 0.22 : 1) : 0;
-    this.music.gain.setTargetAtTime(musicLevel, at, 0.08);
-  }
-
-  private startMusic(tier: MusicTier): void {
-    if (tier === 'silent') return;
-    void this.unlock().then((ready) => {
-      if (!ready || !this.context || !this.music || this.musicOscillators.length > 0 || this.tier !== tier) return;
-      const frequencies = TIER_FREQUENCIES[tier];
-      this.musicOscillators = frequencies.map((frequency, index) => {
-        const oscillator = this.context!.createOscillator();
-        const gain = this.context!.createGain();
-        oscillator.type = index === 0 ? 'sine' : 'triangle';
-        oscillator.frequency.value = frequency;
-        oscillator.detune.value = index === 0 ? -4 : 5;
-        gain.gain.value = index === 0 ? 0.045 : 0.018;
-        oscillator.connect(gain).connect(this.music!);
-        oscillator.start();
-        return oscillator;
-      });
-    });
-  }
-
-  private stopMusic(): void {
-    for (const oscillator of this.musicOscillators) {
-      try { oscillator.stop(); } catch { /* oscillator may already be stopped */ }
-      oscillator.disconnect();
-    }
-    this.musicOscillators = [];
   }
 }
 

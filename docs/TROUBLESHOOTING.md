@@ -189,7 +189,7 @@ Audio is procedural, so missing `.mp3` or `.ogg` files are not the cause in this
 
 ### Music starts twice or continues unexpectedly
 
-Capture the current screen, selected music tier, tab visibility transition, and AudioContext state. A tier change should stop existing oscillators before starting new ones. Reload one tab after ensuring no second tab is playing the app.
+Capture the current screen, selected music scene, tab visibility transition, media-element state, and effects AudioContext state. A scene change should pause the prior music element without resetting `currentTime`, then resume the retained element when that scene returns. Reload one tab after ensuring no second tab is playing the app.
 
 ### No narration voices are listed
 

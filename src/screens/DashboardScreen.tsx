@@ -61,7 +61,7 @@ export function DashboardScreen(props: DashboardScreenProps) {
           <div className="dashboard-stat"><span>Personal best</span><strong>{formatMoney(stats?.highestPrize ?? 0)}</strong></div>
           <div className="dashboard-stat"><span>Runs completed</span><strong>{props.runCount}</strong></div>
           <div className="dashboard-stat"><span>Millionaire wins</span><strong>{stats?.millionaireWins ?? props.setWins}</strong></div>
-          <div className="dashboard-stat"><span>Questions discovered</span><strong>{props.uniqueSeen}<small> / 480</small></strong></div>
+          <div className="dashboard-stat"><span>Questions discovered</span><strong>{props.uniqueSeen}<small> / 525</small></strong></div>
         </aside>
         <nav className="dashboard-nav" aria-label="Dashboard destinations">
           <button type="button" onClick={props.onStatistics}><span>⌁</span><strong>Statistics</strong><small>Career accuracy and milestones</small></button>

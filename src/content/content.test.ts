@@ -70,14 +70,14 @@ describe('built-in content catalog', () => {
 
   it('loads all source content into indexed normalized records', () => {
     const catalog = loadBuiltInCatalog();
-    expect(catalog.summary.questionCount).toBe(480);
+    expect(catalog.summary.questionCount).toBe(525);
     expect(catalog.summary.freshMixQuestionCount).toBe(300);
-    expect(catalog.summary.curatedQuestionCount).toBe(180);
-    expect(catalog.summary.curatedSetCount).toBe(12);
-    expect(catalog.summary.sourceCount).toBe(11);
-    expect(catalog.questionById.size).toBe(480);
-    expect(catalog.setById.size).toBe(12);
-    expect(catalog.sourceById.size).toBe(11);
+    expect(catalog.summary.curatedQuestionCount).toBe(225);
+    expect(catalog.summary.curatedSetCount).toBe(15);
+    expect(catalog.summary.sourceCount).toBe(12);
+    expect(catalog.questionById.size).toBe(525);
+    expect(catalog.setById.size).toBe(15);
+    expect(catalog.sourceById.size).toBe(12);
     expect(catalog.summary.missingFreshMixLevels).toEqual([]);
     expect(catalog.summary.missingCategoryLevelCells).toEqual([]);
   });
@@ -85,7 +85,7 @@ describe('built-in content catalog', () => {
   it('has exact full-release and Fresh Mix ladder coverage', () => {
     const catalog = loadBuiltInCatalog();
     for (let level = 1; level <= 15; level += 1) {
-      expect(catalog.indexes.byLevel[String(level)]).toHaveLength(32);
+      expect(catalog.indexes.byLevel[String(level)]).toHaveLength(35);
       expect(
         catalog.questions.filter((question) => question.usage.freshMix && question.level === level)
       ).toHaveLength(20);
@@ -107,6 +107,27 @@ describe('built-in content catalog', () => {
       set.questionIds.forEach((questionId, index) => {
         expect(catalog.questionById.get(questionId)?.level).toBe(index + 1);
       });
+    }
+  });
+
+  it('includes three complete geography ladders with one capitals question each', () => {
+    const catalog = loadBuiltInCatalog();
+    const geographySetIds = [
+      'builtin-set-physical-geography-01',
+      'builtin-set-borders-geography-01',
+      'builtin-set-islands-and-seas-01'
+    ];
+
+    for (const setId of geographySetIds) {
+      const set = catalog.setById.get(setId);
+      expect(set).toBeDefined();
+      const questions = set!.questionIds.map((questionId) => catalog.questionById.get(questionId)!);
+      expect(questions.map((question) => question.level)).toEqual(
+        Array.from({ length: 15 }, (_, index) => index + 1)
+      );
+      expect(questions.every((question) => question.category === 'Geography')).toBe(true);
+      expect(questions.every((question) => !question.usage.freshMix)).toBe(true);
+      expect(questions.filter((question) => question.tags.includes('capitals'))).toHaveLength(1);
     }
   });
 
